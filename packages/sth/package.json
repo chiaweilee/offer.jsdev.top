@@ -1,0 +1,12 @@
+{
+  "name": "sth",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "lib"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts"
+}
