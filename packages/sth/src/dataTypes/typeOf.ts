@@ -1,4 +1,4 @@
-export type DataType = 'number' | 'boolean' | 'string' | 'function' | 'undefined' | 'null' | 'object' | 'array' | 'bigint' | 'symbol';
+export type DataType = 'number' | 'boolean' | 'string' | 'function' | 'undefined' | 'null' | 'object' | 'array' | 'bigint' | 'symbol' | 'regexp';
 
 function typeOf(obj: unknown): DataType {
   if (obj === null) return 'null';
