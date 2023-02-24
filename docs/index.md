@@ -8,7 +8,7 @@ hero:
   name: 剑指前端Offer
   text: 知识体系，高频面试题
   tagline: |
-    简单易学，内容丰富，小白大牛都适用。
+    内容全面，结构清晰，小白大牛都适用。
   actions:
     - theme: brand
       text: 快速学习
