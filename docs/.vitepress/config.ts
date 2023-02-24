@@ -5,6 +5,7 @@ import sidebar from './sidebar';
 export default defineConfig({
   lang: 'zh-CN',
   title: '剑指前端Offer',
+  base: '/docs/',
   description: '',
   lastUpdated: true,
   cleanUrls: true,
