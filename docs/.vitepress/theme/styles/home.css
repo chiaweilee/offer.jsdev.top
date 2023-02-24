@@ -1,0 +1,83 @@
+.VPHome .VPHero.VPHomeHero .container .main .name .clip {
+  background: linear-gradient(to right , #42d392 , #647eff);
+  background-size: 200% 200%;
+  animation: clip 16s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes clip {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand,
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 8px;
+  position: relative;
+  font-weight: 600;
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand,
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  padding-left: 48px;
+}
+
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand::before,
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt::before {
+  left: 20px;
+  position: absolute;
+  font-family: "iconfont" !important;
+  font-size: 24px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand::before {
+  content: "\e85c";
+}
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand::before {
+  content: "\e74f";
+}
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt::before {
+  content: "\e85a";
+}
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt::before {
+  content: "\e85b";
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--vp-c-green);
+  color: #fff;
+}
+
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand {
+  color: var(--vp-c-bg-alt);
+}
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  color: #000;
+}
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  color: #fff;
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand:hover {
+  background-color: var(--vp-c-green-dark);
+  transition-duration: 0.2s;
+}
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand:hover {
+  background-color: var(--vp-c-green-light);
+}

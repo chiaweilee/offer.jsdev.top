@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "vitepress dev docs",
+    "build": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/eslint-parser": "^7.19.1",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint-config-ali": "^14.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "father-build": "^1.22.5",
+    "prettier": "^2.5.0",
+    "stylelint": "^14.5.0",
+    "stylelint-config-ali": "^0.4.2",
+    "stylelint-scss": "^4.1.0",
+    "vitepress": "^1.0.0-alpha.47",
+    "vue": "^3.2.47",
+    "vue-eslint-parser": "^9.1.0"
+  }
+}
