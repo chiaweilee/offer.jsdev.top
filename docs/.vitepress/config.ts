@@ -5,7 +5,6 @@ import sidebar from './sidebar';
 export default defineConfig({
   lang: 'zh-CN',
   title: '剑指前端Offer',
-  base: '/docs/',
   description: '',
   lastUpdated: true,
   cleanUrls: true,
@@ -19,10 +18,10 @@ export default defineConfig({
     nav: nav(),
     sidebar: sidebar(),
     editLink: {
-      pattern: 'https://github.com/html-js/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/html-js/html-js.github.io/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/html-js/docs' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/html-js/html-js.github.io' }],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2019-present html-js',

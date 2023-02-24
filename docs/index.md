@@ -15,7 +15,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: Star
-      link: https://github.com/html-js/docs
+      link: https://github.com/html-js/html-js.github.io
 
 job-models:
   - title: P5 基础扎实
