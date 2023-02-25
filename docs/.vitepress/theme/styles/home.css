@@ -81,3 +81,8 @@
 .dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand:hover {
   background-color: var(--vp-c-green-light);
 }
+
+.VPFooter {
+  padding: 10px 0 !important;
+  border: none !important;
+}

@@ -26,7 +26,6 @@ export default defineConfig({
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/html-js/html-js.github.io' }],
     footer: {
-      message: 'Released under the MIT License.',
       copyright: 'Copyright © 2019-present html-js',
     },
     // algolia: {

@@ -4,21 +4,25 @@ import JobModel from './JobModel.vue';
 
 const { frontmatter } = useData();
 
-const features = frontmatter.value['job-models'];
+const models = frontmatter.value['job-models'];
+const skillnames = frontmatter.value['skill-name'];
+
 </script>
 
 <template>
-  <div v-if="features" class="JobModels">
+  <div v-if="models" class="JobModels">
     <div class="container">
       <div class="items">
-        <div v-for="feature in features" :key="feature.title" class="item" :class="['grid-4']">
+        <div v-for="model in models" :key="model.title" class="item" :class="['grid-4']">
           <JobModel
-            :icon="feature.icon"
-            :title="feature.title"
-            :subtitle="feature.subtitle"
-            :details="feature.details"
-            :link="feature.link"
-            :link-text="feature.linkText"
+            :icon="model.icon"
+            :title="model.title"
+            :subtitle="model.subtitle"
+            :details="model.details"
+            :skill="model.skill"
+            :skillnames="skillnames"
+            :link="model.link"
+            :link-text="model.linkText"
           />
         </div>
       </div>
