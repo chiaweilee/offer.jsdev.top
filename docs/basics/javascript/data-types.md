@@ -105,12 +105,13 @@ true.constructor === Boolean; // true
 
 ```js{2}
 function Foo(){};
-Foo.prototype = new String(); // 改变原型
+Foo.prototype = new Array(); // 改变原型
 
 const foo = new Foo();
  
-console.log(foo.constructor === Foo); // false
-console.log(foo.constructor === String); // true
+foo.constructor === Foo; // false
+foo.constructor === Array; // true
+Array.prototype.isPrototypeOf(foo);; // true
 ```
 
 ### Object.prototype.toString.call()
@@ -151,5 +152,30 @@ typeOf([]); // array
 typeOf({}); // object
 typeOf(null); // null
 typeOf(/a/); // regexp
+```
+:::
+
+### 判断数组
+
+```js
+// 不可靠，原型链有可能被改写过
+obj instanceof Array;
+Array.prototype.isPrototypeOf(obj);
+obj.__proto__ === Array.prototype;
+
+// 可靠，书写麻烦
+Object.prototype.toString.call(obj).slice(8,-1) === 'Array';
+
+// 可靠，仅 ES5 下支持
+Array.isArray(obj);
+```
+
+::: code-group
+<<< @/../packages/sth/src/dataTypes/isArray.ts [源代码：手写 isArray]
+```js [代码应用效果]
+import { isArray } from 'sth';
+
+isArray(2); // false
+isArray([]); // true
 ```
 :::
