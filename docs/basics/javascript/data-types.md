@@ -77,5 +77,8 @@ function instanceOf(obj, constructor) {
   }
 }
 
-instanceOf([], Array); // true 👍
+instanceOf([], Array); // true
+
+2 instanceof Number; // false
+instanceOf(2, Number); // true 👍
 ```
