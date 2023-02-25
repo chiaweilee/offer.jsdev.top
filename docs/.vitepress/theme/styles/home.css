@@ -86,3 +86,13 @@
   padding: 10px 0 !important;
   border: none !important;
 }
+
+.VPLink.VPNavBarMenuLink:empty {
+  padding: 0 4px;
+}
+.VPLink.VPNavBarMenuLink:empty::before {
+  width: 1px;
+  height: 24px;
+  background-color: var(--vp-c-divider);
+  content: "";
+}

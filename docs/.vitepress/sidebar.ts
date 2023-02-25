@@ -3,7 +3,7 @@ function sidebar() {
     '/basic/': [
       {
         text: 'JavaScript 基础',
-        items: [{ text: '数据类型', link: '/basics/javascript/data-types' }],
+        items: [{ text: '数据类型', link: '/basic/javascript/data-types' }],
       },
     ],
     '/guide/': [
@@ -15,7 +15,7 @@ function sidebar() {
         ],
       },
       {
-        text: '学习大纲',
+        text: 'Job Model',
         items: [
           { text: 'P5 扎实基础', link: '/guide/p5' },
           { text: 'P6 独当一面', link: '/guide/p6' },

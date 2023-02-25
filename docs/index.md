@@ -11,7 +11,7 @@ hero:
     内容全面，结构清晰，小白大牛都适用。
   actions:
     - theme: brand
-      text: 快速学习
+      text: 快速上手
       link: /guide/getting-started
     - theme: alt
       text: Star
@@ -21,9 +21,9 @@ skill-name:
   - 基础
   - 算法
   - 框架
-  - 项目工程
-  - 领域技术
-  - 架构
+  - 主导项目
+  - 领域专精
+  - 架构设计
 
 job-models:
   - title: P5 基础扎实

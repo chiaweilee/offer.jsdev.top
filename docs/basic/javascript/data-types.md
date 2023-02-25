@@ -82,19 +82,7 @@ true instanceof Boolean; // false
 
 提示：原型链最终的指向是 Object 的 prototype, 即 null。
 
-::: code-group
-<<< @/../packages/sth/src/dataTypes/instanceOf.ts [源代码：手写 instanceof]
-```js [代码应用效果]
-import { instanceOf } from 'sth';
-
-instanceOf([], Array); // true
-instanceOf({}, Object); // true
-
-// 正确判断原始数据类型
-2 instanceof Number; // false
-instanceOf(2, Number); // true
-```
-:::
+<!--@include: ../../interview/questions/write-instanceof.md-->
 
 ### constructor
 
@@ -146,21 +134,7 @@ Object.prototype.toString.call([1]); // [object Array]
 
 ### 高频面试题：手写 typeof
 
-::: code-group
-<<< @/../packages/sth/src/dataTypes/typeOf.ts [源代码：手写 typeof]
-```js [代码应用效果]
-import { typeOf } from 'sth';
-
-typeOf(2); // number
-typeOf(true); // boolean
-
-// 正确判断引用数据类型
-typeOf([]); // array
-typeOf({}); // object
-typeOf(null); // null
-typeOf(/a/); // regexp
-```
-:::
+<!--@include: ../../interview/questions/write-typeof.md-->
 
 ### 判断数组
 
