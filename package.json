@@ -5,7 +5,7 @@
   ],
   "scripts": {
     "start": "vitepress dev docs",
-    "build": "vitepress dev docs",
+    "build": "vitepress build docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
