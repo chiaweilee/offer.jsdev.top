@@ -2,7 +2,7 @@ function sidebar() {
   return {
     '/basics/': [
       {
-        text: 'JavaScript',
+        text: 'JavaScript 基础',
         items: [
           { text: '数据类型', link: '/basics/javascript/data-types' },
         ],
