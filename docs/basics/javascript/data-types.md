@@ -163,19 +163,42 @@ obj instanceof Array;
 Array.prototype.isPrototypeOf(obj);
 obj.__proto__ === Array.prototype;
 
-// 可靠，书写麻烦
-Object.prototype.toString.call(obj).slice(8,-1) === 'Array';
-
 // 可靠，仅 ES5 下支持
 Array.isArray(obj);
+
+// 可靠
+Object.prototype.toString.call(obj).slice(8,-1) === 'Array';
 ```
 
-::: code-group
-<<< @/../packages/sth/src/dataTypes/isArray.ts [源代码：手写 isArray]
-```js [代码应用效果]
-import { isArray } from 'sth';
+还可以用前面手写的 typeof
 
-isArray(2); // false
-isArray([]); // true
+```js
+import { typeOf } from 'sth';
+typeOf(obj) === 'array';
 ```
-:::
+
+### 判断对象
+
+```js
+// 不可靠
+obj instanceof Object;
+// [] instanceof Object === true;
+// (function(){}) instanceof Object === true;
+
+// 不可靠，原型链有可能被改写过
+obj.__proto__ === Object.prototype;
+
+// 可靠
+Object.prototype.toString.call(obj).slice(8,-1) === 'Object';
+```
+
+还可以用前面手写的 typeof
+
+```js
+import { typeOf } from 'sth';
+typeOf(obj) === 'object';
+```
+
+## 三、undefined 和 null
+
+## 四、NaN 和 isNaN
