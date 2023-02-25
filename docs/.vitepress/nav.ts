@@ -7,7 +7,7 @@ function nav() {
     { text: '前端基础', link: '/basic/', activeMatch: '/basic/' },
     { text: '算法', link: '/algorithm/', activeMatch: '/algorithm/' },
     { text: '框架', link: '/framework/', activeMatch: '/framework/' },
-    { text: '主导项目', link: '/project/', activeMatch: '/project/' },
+    { text: '工程化', link: '/project/', activeMatch: '/project/' },
     { text: '领域专精', link: '/speciality/', activeMatch: '/speciality/' },
     { text: '架构设计', link: '/architecture/', activeMatch: '/architecture/' },
     { text: '', link: '', activeMatch: '' }, // separator
