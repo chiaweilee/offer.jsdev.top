@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import { defineConfig } from 'vitepress';
 import nav from './nav';
 import sidebar from './sidebar';
@@ -8,7 +10,14 @@ export default defineConfig({
   description: '',
   lastUpdated: true,
   cleanUrls: true,
-  head: [['meta', { name: 'theme-color', content: '#3c8772' }]],
+  head: [
+    ['meta', { name: 'theme-color', content: '#3c8772' }],
+    [
+      'script',
+      {},
+      fs.readFileSync(path.resolve(__dirname, './inlined-scripts/hm.js'), 'utf-8'),
+    ],
+  ],
   markdown: {
     headers: {
       level: [0, 0],
