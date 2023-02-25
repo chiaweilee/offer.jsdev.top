@@ -1,5 +1,13 @@
 function sidebar() {
   return {
+    '/basics/': [
+      {
+        text: 'JavaScript',
+        items: [
+          { text: '数据类型', link: '/basics/javascript/data-types' },
+        ],
+      },
+    ],
     '/guide/': [
       {
         text: 'Introduction',

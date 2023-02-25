@@ -1,3 +1,4 @@
-import typeOf from './dataTypes/typeOf';
+import { typeOf } from './dataTypes/typeOf';
+import { instanceOf } from './dataTypes/instanceOf';
 
-export { typeOf };
+export { typeOf, instanceOf };
