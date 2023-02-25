@@ -2,13 +2,13 @@
 layout: home
 
 title: 剑指前端Offer
-titleTemplate: 前端知识体系，高频面试题 & 算法 框架 架构 简历优化 面试技巧
+titleTemplate: 前端知识体系，高频面试题 & 算法 刷题 简历优化
 
 hero:
   name: 剑指前端Offer
   text: 知识体系，高频面试题
   tagline: |
-    内容全面，结构清晰，小白大牛都适用。
+    大厂前端团队整理，内容全面，结构清晰，面试必备。
   actions:
     - theme: brand
       text: 快速上手

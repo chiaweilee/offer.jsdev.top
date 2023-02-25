@@ -27,7 +27,7 @@ export default defineConfig({
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/html-js/html-js.github.io' }],
     footer: {
-      copyright: 'Copyright © 2019-present html-js',
+      copyright: 'Copyright © 2023 html-js',
     },
     // algolia: {
     //   appId: '',
