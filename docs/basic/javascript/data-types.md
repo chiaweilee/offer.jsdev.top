@@ -104,9 +104,9 @@ Foo.prototype = new Array(); // 改变原型
 
 const foo = new Foo();
  
-foo.constructor === Foo; // false
-foo.constructor === Array; // true
-Array.prototype.isPrototypeOf(foo);; // true
+foo.constructor === Foo; // false // [!code error]
+foo.constructor === Array; // true // [!code error]
+Array.prototype.isPrototypeOf(foo);; // true // [!code error]
 ```
 
 ### Object.prototype.toString.call()
@@ -124,11 +124,11 @@ Object.prototype.toString.call(null); // [object Null]
 
 注意：Array、 function 等类型作为 Object 的实例，都重写了 toString 方法。
 
-```js{4}
+```js
 ({}).toString(); // [object Object]
 Object.prototype.toString.call({}); // [object Object]
 
-([1]).toString(); // 1
+([1]).toString(); // 1 // [!code warning]
 Object.prototype.toString.call([1]); // [object Array]
 ```
 
@@ -151,12 +151,13 @@ Array.isArray(obj);
 Object.prototype.toString.call(obj).slice(8,-1) === 'Array';
 ```
 
-还可以用前面手写的 typeof
-
+::: info 小提示
+可以用前面手写的 typeof
 ```js
 import { typeOf } from 'sth';
 typeOf(obj) === 'array';
 ```
+:::
 
 ### 判断对象
 
@@ -173,12 +174,13 @@ obj.__proto__ === Object.prototype;
 Object.prototype.toString.call(obj).slice(8,-1) === 'Object';
 ```
 
-还可以用前面手写的 typeof
-
+::: info 小提示
+可以用前面手写的 typeof
 ```js
 import { typeOf } from 'sth';
 typeOf(obj) === 'object';
 ```
+:::
 
 ## undefined 和 null
 

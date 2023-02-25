@@ -1,6 +1,6 @@
 ::: code-group
 <<< @/../packages/sth/src/dataTypes/typeOf.ts [源代码：手写 typeof]
-```js [代码应用效果]
+```js [代码效果]
 import { typeOf } from 'sth';
 
 typeOf(2); // number

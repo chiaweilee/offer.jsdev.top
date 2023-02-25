@@ -1,6 +1,6 @@
 ::: code-group
 <<< @/../packages/sth/src/dataTypes/instanceOf.ts [源代码：手写 instanceof]
-```js [代码应用效果]
+```js [代码效果]
 import { instanceOf } from 'sth';
 
 instanceOf([], Array); // true
