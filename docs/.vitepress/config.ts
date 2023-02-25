@@ -15,6 +15,7 @@ export default defineConfig({
     ['script', {}, fs.readFileSync(path.resolve(__dirname, './inlined-scripts/hm.js'), 'utf-8')],
   ],
   themeConfig: {
+    logo: 'logo.png',
     nav: nav(),
     outline: [2, 3],
     outlineTitle: '-',
