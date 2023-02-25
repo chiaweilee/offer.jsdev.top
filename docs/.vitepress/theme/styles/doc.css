@@ -1,0 +1,16 @@
+.VPDocAside .outline-title {
+  visibility: hidden;
+}
+
+.VPDocAside .root li {
+  list-style: cjk-ideographic;
+  margin-left: 24px;
+}
+
+.VPDocAside .nested {
+  padding-left: 0;
+}
+.VPDocAside .nested li {
+  list-style: decimal;
+  margin-left: 0;
+}

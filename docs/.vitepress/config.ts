@@ -16,7 +16,10 @@ export default defineConfig({
   ],
   themeConfig: {
     nav: nav(),
+    outline: [2, 3],
+    outlineTitle: '-',
     sidebar: sidebar(),
+    lastUpdatedText: '最后修改时间',
     editLink: {
       pattern: 'https://github.com/html-js/html-js.github.io/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',

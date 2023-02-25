@@ -1,6 +1,13 @@
+---
+reference:
+  - title: 「2021」高频前端面试题汇总之JavaScript篇（上）
+    href: https://juejin.cn/post/6940945178899251230
+    site: CUGGZ - 稀土掘金
+---
+
 # 数据类型
 
-## 一、八种数据类型
+## 八种数据类型
 
 即 `Undefined`、`Null`、`Boolean`、`Number`、`String`、`Object`、`Symbol`、`BigInt`。
 
@@ -10,7 +17,7 @@
 **引用数据类型**
 （Function，Object，包括对象、数组、正则表达式）存储在堆（heap），占用空间大、大小不固定。引用数据类型在栈中存储了指针，指针指向堆中实体的起始位置。
 
-::: details 练一练：指针
+::: info 练一练
 输出结果是什么？为什么？
 ```js{4}
 const a = { c: 1 };
@@ -22,7 +29,7 @@ console.log(b.c); // ?
 
 
 
-## 二、数据类型检测
+## 数据类型检测
 
 ### typeof
 
@@ -199,6 +206,6 @@ import { typeOf } from 'sth';
 typeOf(obj) === 'object';
 ```
 
-## 三、undefined 和 null
+## undefined 和 null
 
-## 四、NaN 和 isNaN
+## NaN 和 isNaN
