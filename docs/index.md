@@ -61,7 +61,7 @@ job-models:
       - false
   - title: P8 领域突破
     subtitle: 35-60K
-    details: 资深前端技术专家
+    details: 高级前端技术专家
     link: /guide/p8
     skill:
       - true

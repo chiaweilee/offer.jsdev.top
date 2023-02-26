@@ -28,6 +28,12 @@ function sidebar() {
         items: [{ text: '贡献代码', link: '/guide/contribute' }],
       },
     ],
+    '/algorithm/': [
+      {
+        text: '数组类算法',
+        items: [],
+      },
+    ],
   };
 }
 
