@@ -9,7 +9,7 @@ function nav() {
     { text: '框架', link: '/framework/', activeMatch: '/framework/' },
     { text: '工程化', link: '/project/', activeMatch: '/project/' },
     { text: '领域专精', link: '/speciality/', activeMatch: '/speciality/' },
-    { text: '架构设计', link: '/architecture/', activeMatch: '/architecture/' },
+    { text: '架构规划', link: '/architecture/', activeMatch: '/architecture/' },
     { text: '', link: '', activeMatch: '' }, // separator
     { text: '简历优化', link: '/resume/', activeMatch: '/resume/' },
     { text: '面试题', link: '/interview/questions/', activeMatch: '/interview/' },

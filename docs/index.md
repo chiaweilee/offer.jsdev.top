@@ -23,7 +23,7 @@ skill-name:
   - 框架
   - 工程化
   - 领域专精
-  - 架构设计
+  - 架构规划
 
 job-models:
   - title: P5 基础扎实
