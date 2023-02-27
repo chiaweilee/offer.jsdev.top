@@ -452,3 +452,24 @@ undefined === null; // false
 0 === []; // false
 [] === []; // false
 ```
+
+### 0.1 + 0.2 !== 0.3
+
+```js
+0.1 + 0.2; // 0.30000000000000004
+```
+
+### BigInt
+
+Number.MAX_SAFE_INTEGER 表示最⼤安全数字，计算结果是 9007199254740991 。超过这个数值范围就会有精度不准的情况，BigInt 就是为了解决此问题。
+
+```js
+Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true // [!code error]
+BigInt(9007199254740991) + BigInt(1) === BigInt(9007199254740991) + BigInt(2); // false
+BigInt(9007199254740991); // 9007199254740991n
+9007199254740990n + 1n === BigInt(9007199254740991); // true
+```
+
+### Object.assign 和扩展运算法
+
+Object.assign 和扩展运算符（...）都是浅拷贝
