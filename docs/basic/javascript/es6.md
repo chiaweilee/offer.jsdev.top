@@ -7,7 +7,7 @@ reference:
 
 # ES6
 
-## ES5 、ES6、ECMAScript 2015
+## ES5 、ES6、ES2015
 
 ECMAScript 是 JavaScript 的标准规范。
 
