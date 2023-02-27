@@ -2,7 +2,7 @@
 reference:
   - title: 「2021」高频前端面试题汇总之JavaScript篇（上）
     href: https://juejin.cn/post/6940945178899251230
-    site: CUGGZ - 稀土掘金
+    site: CUGGZ
   - title: 一文读懂js中的隐式类型转换
     href: https://baijiahao.baidu.com/s?id=1686477604928355353&wfr=spider&for=pc
     site: 左道前端
@@ -367,33 +367,82 @@ String(Number.MAX_SAFE_INTEGER); // 9007199254740991
 
 ##### +
 
++ 号比较特殊，既可以当做算数运算符做加法，又可以当做字符串连接符。
+
+###### 除 String 外的原始数据类型，作算数运算符。
+
+* 进行算术运算时，原始数据类型转为数字使用 Number() 方法
+
+```js
+1 + null; // 1
+null + null; // 0
+1 + undefined; // NaN
+1 + true; // 2
+```
+
+###### String 类型及引用数据类型，作字符串链接符
+
+* 非 string 类型会转为 string 类型
+
+```js
+[] + []; // ''
+[1] + ['a']; // '1a'
+[1] + {}; // '1[object Object]'
+true + {}; // 'true[object Object]'
+undefined + {}; // 'undefined[object Object]'
+```
+
 ##### - * /
+
+* 非数字类型会转为数字类型
+* 如果是原始数据类型会调用 Number() 方法进行转换
+* 如果是引用数据类型会转换为数值，如果转换后不是数字则会返回 NaN。
+
+```js
+2 - '1'; // 1
+2 - true; // 1
+2 - []; // 2
+2 - null; // 2
+2 - undefined; // NaN
+2 - {}; // NaN
+
+2 * '1'; // 1
+2 * {}; // NaN
+
+2 / '1'; // 1
+2 / {}; // NaN
+```
 
 #### 逻辑运算符
 
-#### 条件判断
+* 非布尔类型会转为布尔类型
+
+```js
+1 && 2; // 2
+2 && {}; // {}
+
+![]; // false
+!NaN; // true
+```
 
 #### 比较运算符
 
-```js
-const a = {};
-a > 2; // false
+* null == undefined 不会进行转换，总返回true
+* 引用数据类型，会先转换为string（先调用valueOf，后调用toString），再转换为number
+* 如果 == 左右都是引用数据类型，会进行地址比较
 
-a.valueOf() ;// 先valueOf，得到 {}
-a.toString(); // 再 toString，得到 [object Object]
-Number(a.toString()); // NaN，根据 < 和 > 操作符的规则，要转换成数字
-NaN > 2; // false
+```js
+'1' == 1; // true
+undefined == null; // true
+0 == []; // true
+[] == []; // false
 ```
 
-```js
-const a = {};
-const b = {};
-a + b; // [object Object][object Object]
+* === 不会进行类型转换，直接判断
 
-// 逻辑
-a.valueOf(); // 先 valueOf，得到 {}
-a.toString(); // 再 toString，得到 [object Object]
-b.valueOf(); // 同理，{}
-b.toString(); // 同理，[object Object]
-a + b; // [object Object][object Object]
+```js
+'1' ==- 1; // false
+undefined === null; // false
+0 === []; // false
+[] === []; // false
 ```
