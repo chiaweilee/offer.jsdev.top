@@ -42,7 +42,7 @@ typeof true; // boolean
 typeof 'str'; // string
 typeof undefined; // undefined
 typeof Symbol(); // symbol
-typeof BigInt(1); // bigint
+typeof 1n; // bigint
 typeof function(){}; // function
 
 typeof []; // object
@@ -65,6 +65,8 @@ instanceof 可以用来测试一个对象在其原型链中是否存在一个构
 2 instanceof Number; // false
 true instanceof Boolean; // false
 'str' instanceof String; // false
+1n instanceof BigInt; // false
+Symbol('a') instanceof Symbol; // false
 
 [] instanceof Array; // true
 (function(){}) instanceof Function; // true
@@ -465,9 +467,8 @@ Number.MAX_SAFE_INTEGER 表示最⼤安全数字，计算结果是 9007199254740
 
 ```js
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true // [!code error]
-BigInt(9007199254740991) + BigInt(1) === BigInt(9007199254740991) + BigInt(2); // false
+9007199254740991n + 1n === 9007199254740991n + 2n; // false
 BigInt(9007199254740991); // 9007199254740991n
-9007199254740990n + 1n === BigInt(9007199254740991); // true
 ```
 
 ## Object.assign 和扩展运算法
