@@ -249,7 +249,30 @@ Number.isNaN(undefined); // false
 * 当期望值为 string 时会调用 toString 方法。如果返回的值不是原始值，则继续调用 valueOf 方法。
 
 ### valueOf 方法
+
+```js
+[1].valueOf(); // [1]
+true.valueOf(); // true
+new Date().valueOf(); // 1677469267035
+(function () {}).valueOf(); // f (){}
+(2).valueOf(); // 2
+({}.valueOf()); // {}
+"2".valueOf(); // '2'
+/a/.valueOf(); // /a/
+```
+
 ### toString 方法
+
+```js
+[1, 2].toString(); // 1,2
+true.toString(); // 'true'
+new Date().toString(); // Mon Feb 27 2023 11:42:26 GMT+0800 (China Standard Time)
+(function () {}).toString(); // function(){}
+(2).toString(); // '2'
+({}.toString()); // '[object Object]'}
+"2".toString(); // '2'
+/a/.toString(); // '/a/'
+```
 
 ### 转数值
 
