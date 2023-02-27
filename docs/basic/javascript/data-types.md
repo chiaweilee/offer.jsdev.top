@@ -363,13 +363,11 @@ String(Number.MAX_SAFE_INTEGER); // 9007199254740991
 
 ### 隐式类型转换
 
-#### 算数运算符
+#### 算数运算符 +
 
-##### +
+算数运算符 + 号比较特殊，既可以当做算数运算符做加法，又可以当做字符串连接符。
 
-+ 号比较特殊，既可以当做算数运算符做加法，又可以当做字符串连接符。
-
-###### 除 String 外的原始数据类型，作算数运算符。
+##### 除 String 外的原始数据类型，作算数运算符。
 
 * 进行算术运算时，原始数据类型转为数字使用 Number() 方法
 
@@ -380,7 +378,7 @@ null + null; // 0
 1 + true; // 2
 ```
 
-###### String 类型及引用数据类型，作字符串链接符
+##### String 类型及引用数据类型，作字符串链接符
 
 * 非 string 类型会转为 string 类型
 
@@ -392,7 +390,7 @@ true + {}; // 'true[object Object]'
 undefined + {}; // 'undefined[object Object]'
 ```
 
-##### - * /
+#### 算数运算符 - * /
 
 * 非数字类型会转为数字类型
 * 如果是原始数据类型会调用 Number() 方法进行转换
@@ -413,7 +411,7 @@ undefined + {}; // 'undefined[object Object]'
 2 / {}; // NaN
 ```
 
-#### 逻辑运算符
+#### 逻辑运算符 && || !
 
 * 非布尔类型会转为布尔类型
 
@@ -421,11 +419,14 @@ undefined + {}; // 'undefined[object Object]'
 1 && 2; // 2
 2 && {}; // {}
 
+1 || 2; // 1
+2 || {}; // 2
+
 ![]; // false
 !NaN; // true
 ```
 
-#### 比较运算符
+#### 比较运算符 == > <
 
 * null == undefined 不会进行转换，总返回true
 * 引用数据类型，会先转换为string（先调用valueOf，后调用toString），再转换为number
@@ -436,6 +437,11 @@ undefined + {}; // 'undefined[object Object]'
 undefined == null; // true
 0 == []; // true
 [] == []; // false
+
+'2' > 1; // true
+undefined > null; // false
+0 > []; // false
+1 < []; // false
 ```
 
 * === 不会进行类型转换，直接判断
