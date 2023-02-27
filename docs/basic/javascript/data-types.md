@@ -3,6 +3,9 @@ reference:
   - title: 「2021」高频前端面试题汇总之JavaScript篇（上）
     href: https://juejin.cn/post/6940945178899251230
     site: CUGGZ - 稀土掘金
+  - title: 一文读懂js中的隐式类型转换
+    href: https://baijiahao.baidu.com/s?id=1686477604928355353&wfr=spider&for=pc
+    site: 左道前端
 ---
 
 # 数据类型
@@ -359,6 +362,18 @@ String(Number.MAX_SAFE_INTEGER); // 9007199254740991
 ```
 
 ### 隐式类型转换
+
+#### 算数运算符
+
+##### +
+
+##### - * /
+
+#### 逻辑运算符
+
+#### 条件判断
+
+#### 比较运算符
 
 ```js
 const a = {};
