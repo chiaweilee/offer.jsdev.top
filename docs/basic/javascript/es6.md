@@ -12,5 +12,5 @@ reference:
 ECMAScript 是 JavaScript 的标准规范。
 
 ECMAScript 5 也被称为 ES5 和 ECMAScript 2009。
-ECMAScript 6，简称 ES6，正式名 ECMAScript 2015（ES2015）。
-后续版本为 ECMAScript 2016、ECMAScript  2017 …… ECMAScript 2021。
+<br/>ECMAScript 6，简称 ES6，正式名 ECMAScript 2015（ES2015）。
+<br/>后续版本为 ECMAScript 2016、ECMAScript  2017 …… ECMAScript 2021。
