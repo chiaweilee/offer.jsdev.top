@@ -37,10 +37,10 @@ console.log(b.c); // ?
 typeof 2; // number
 typeof true; // boolean
 typeof 'str'; // string
-typeof function(){}; // function
 typeof undefined; // undefined
 typeof Symbol(); // symbol
 typeof BigInt(1); // bigint
+typeof function(){}; // function
 
 typeof []; // object
 typeof {}; // object
@@ -48,14 +48,14 @@ typeof null; // object
 typeof /a/; // object
 ```
 
-数组、对象、null 和正则表达式都会被判断为 object。
+数组、对象、null、正则表达式都会被判断为 object。
 
-> 思考：如何判断数组、对象、null 和正则表达式？
+> 思考：如何正确判断数组、对象、null、正则表达式的类型？
 
 ### instanceof
 
-instanceof 只能正确判断引用类型数据，可以用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
-其内部运行机制是判断在其原型链中能否找到该类型的原型。
+instanceof 可以用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
+其内部运行机制是判断在其原型链中能否找到该类型的原型，所以**只能正确判断引用类型数据**。
 
 ```js
 // instanceof 无法正确判断原始数据类型
@@ -122,12 +122,11 @@ Object.prototype.toString.call(undefined); // [object Undefined]
 Object.prototype.toString.call(null); // [object Null]
 ```
 
-注意：Array、 function 等类型作为 Object 的实例，都重写了 toString 方法。
+#### Object.prototype.toString() 和 Object.toString()
+
+数据、函数等类型作为 Object 的实例，都重写了 Object.toString 方法。
 
 ```js
-({}).toString(); // [object Object]
-Object.prototype.toString.call({}); // [object Object]
-
 ([1]).toString(); // 1 // [!code warning]
 Object.prototype.toString.call([1]); // [object Array]
 ```
@@ -184,18 +183,10 @@ typeOf(obj) === 'object';
 
 ## undefined 和 null
 
-### undefined
-
 undefined 代表未定义。
-
-### null
-
 null 代表空对象，可以作为初始化赋值变量。
 
 undefined 不是保留字，可以作为变量名。但这样做很危险，会影响对 undefimed 值的判断。
-
-### void 0
-
 可以用 void 0 判断 undefined。
 
 ```js
@@ -248,12 +239,19 @@ isNaN(undefined); // true
 Number.isNaN(undefined); // false
 ```
 
-> 思考：是否可以用 !isNaN() 检查一个变量是否为数字
+> 思考：是否可以用 !isNaN() 判断类型是否为数字
 
 ## 类型转换
-### 转数值
 
-为了将值转换为相应的基本类型值，抽象操作 ToPrimitive 会首先（通过内部操作 DefaultValue）检查该值是否有valueOf()方法。如果有并且返回基本类型值，就使用该值进行强制类型转换。如果没有就使用 toString() 的返回值（如果存在）来进行强制类型转换。
+当对象类型进行类型转换时，会调用 JavaScript 内部的 toPrimitive 方法。
+
+* 当期望值为 number 时会调用 valueOf 方法。如果返回的值不是原始值，则继续调用 toString 方法。
+* 当期望值为 string 时会调用 toString 方法。如果返回的值不是原始值，则继续调用 valueOf 方法。
+
+### valueOf 方法
+### toString 方法
+
+### 转数值
 
 如果 valueOf() 和 toString() 均不返回基本类型值，会产生 TypeError 错误。
 
