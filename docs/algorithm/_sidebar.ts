@@ -1,6 +1,8 @@
 export default [
   {
-    text: '数组类算法',
-    items: [],
+    text: '位运算',
+    items: [
+      { text: '.', link: '/algorithm/bit-manipulation/' },
+    ],
   },
 ];
