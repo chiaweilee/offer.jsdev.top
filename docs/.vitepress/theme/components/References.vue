@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useData } from 'vitepress';
 
-const { frontmatter } = useData();
-
-const reference = frontmatter.value['reference'];
+// https://github.com/vuejs/vitepress/issues/769#issuecomment-1152541214
+const reference = computed(() => {
+  return useData().frontmatter.value['reference'];
+});
 </script>
 
 <template>
