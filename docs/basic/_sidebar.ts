@@ -2,8 +2,9 @@ export default [
   { text: 'HTML CSS', items: [
     {item:'HTML',link: '/basic/html'},
     {item:'CSS',link: '/basic/'},
-   ]},
- {link: '/basic/  {
+   ]
+  },
+  {
     text: 'JavaScript',
     items: [
       { text: '数据类型', link: '/basic/javascript/data-types' },
