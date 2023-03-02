@@ -3,6 +3,9 @@ reference:
   - title: 「2021」高频前端面试题汇总之JavaScript篇（上）
     href: https://juejin.cn/post/6940945178899251230
     site: CUGGZ
+  - title: 136. 只出现一次的数字
+    href: https://leetcode.cn/problems/single-number
+    site: 力扣（LeetCode）
 ---
 
 # 二进制
@@ -181,6 +184,10 @@ mathEqual(0.1111 + 0.2222, 0.3333); // true
 ```js
 a ^ b ^ b === a ^ 0 === a;
 ```
+
+### 算法题：136. 只出现一次的数字
+
+<!--@include: ../../algorithm/problems/136.md-->
 
 ### 原码、补码、反码
 
