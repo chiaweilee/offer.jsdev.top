@@ -1,7 +1,7 @@
 export default [
   { text: 'HTML CSS', items: [
-    {item:'HTML',link: '/basic/html'},
-    {item:'CSS',link: '/basic/'},
+    {text:'HTML',link: '/basic/html'},
+    {text:'CSS',link: '/basic/'},
    ]
   },
   {
