@@ -1,6 +1,6 @@
 export default [
-  { text: 'HTML' },
-  { text: 'CSS' },
+  { text: 'HTML', link: '/basic/html' },
+  { text: 'CSS', link: '/basic/css' },
   {
     text: 'JavaScript',
     items: [
