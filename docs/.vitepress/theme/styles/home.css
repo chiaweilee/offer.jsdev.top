@@ -74,6 +74,7 @@
   color: #fff;
 }
 
+
 .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand:hover {
   background-color: var(--vp-c-green-dark);
   transition-duration: 0.2s;
@@ -95,4 +96,45 @@
   height: 24px;
   background-color: var(--vp-c-divider);
   content: "";
+}
+
+.gh-count {
+  position: relative;
+  display: inline-block;
+  background-color: #fafafa;
+  border: 1px solid var(--vp-button-alt-border);
+  padding: 3px 10px 3px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  border-radius: 8px;
+  height: 40px;
+  margin: 6px 0 6px 1px;
+}
+
+.gh-count::after, .gh-count::before {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.gh-count::before {
+  left: -5px;
+  margin-top: -6px;
+  border-width: 6px 6px 6px 0;
+  top: 50%;
+  border-right-color: #fafafa;
+}
+
+.gh-count::after {
+  left: -6px;
+  margin-top: -7px;
+  border-width: 7px 7px 7px 0;
+  top: 50%;
+  z-index: -1;
+  border-right-color: var(--vp-button-alt-border);
 }
