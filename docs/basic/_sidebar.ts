@@ -1,8 +1,10 @@
 export default [
-  { text: 'HTML CSS', items: [
-    {text:'HTML',link: '/basic/html'},
-    {text:'CSS',link: '/basic/'},
-   ]
+  {
+    text: 'HTML CSS',
+    items: [
+      { text: 'HTML', link: '/basic/html' },
+      { text: 'CSS', link: '/basic/css' },
+    ],
   },
   {
     text: 'JavaScript',
@@ -12,7 +14,4 @@ export default [
       { text: 'ES6', link: '/basic/javascript/es6' },
     ],
   },
-  { text: '计算机网络' },
-  { text: '浏览器原理' },
-  { text: '性能优化' },
 ];

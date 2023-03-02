@@ -3,6 +3,7 @@ import basic from '../basic/_sidebar';
 import algorithm from '../algorithm/_sidebar';
 import framework from '../framework/_sidebar';
 import project from '../project/_sidebar';
+import speciality from '../speciality/_sidebar';
 
 function sidebar() {
   return {
@@ -11,6 +12,7 @@ function sidebar() {
     '/algorithm/': algorithm,
     '/framework/': framework,
     '/project/': project,
+    '/speciality/': speciality,
   };
 }
 
