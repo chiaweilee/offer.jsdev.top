@@ -101,7 +101,7 @@
 .gh-count {
   position: relative;
   display: inline-block;
-  background-color: #fafafa;
+  background-color: var(--vp-button-alt-bg);
   border: 1px solid var(--vp-button-alt-border);
   padding: 3px 10px 3px 8px;
   font-size: 16px;
@@ -110,6 +110,10 @@
   border-radius: 8px;
   height: 40px;
   margin: 6px 0 6px 1px;
+}
+
+.dark .gh-count {
+  background-color: var(--vp-button-alt-bg);
 }
 
 .gh-count::after, .gh-count::before {
@@ -127,7 +131,11 @@
   margin-top: -6px;
   border-width: 6px 6px 6px 0;
   top: 50%;
-  border-right-color: #fafafa;
+  border-right-color: var(--vp-button-alt-bg);
+}
+
+.dark .gh-count::before {
+  border-right-color: var(--vp-button-alt-bg);
 }
 
 .gh-count::after {
