@@ -4,7 +4,7 @@ function nav() {
   return [
     { text: '导读', link: '/guide/getting-started', activeMatch: '/guide/' },
     { text: '', link: '', activeMatch: '' }, // separator
-    { text: '前端基础', link: '/basic/', activeMatch: '/basic/' },
+    { text: '前端基础', link: '/basic/html/', activeMatch: '/basic/' },
     { text: '算法', link: '/algorithm/', activeMatch: '/algorithm/' },
     { text: '框架', link: '/framework/', activeMatch: '/framework/' },
     { text: '工程化', link: '/project/', activeMatch: '/project/' },
