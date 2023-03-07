@@ -29,7 +29,7 @@ reference:
 
 ## script 标签，defer 和 async
 
-defer 和 async 属性都是去异步加载外部 JS 脚本。
+defer 和 async 属性都是异步加载外部 JS 脚本。
 
 defer 在文档完成 HTML 解析后开始执行，在 DOMContentLoaded 事件之前。
 
