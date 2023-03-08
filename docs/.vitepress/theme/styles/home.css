@@ -97,6 +97,9 @@
   background-color: var(--vp-c-divider);
   content: "";
 }
+.VPLink.VPNavScreenMenuLink:empty {
+  display: none;
+}
 
 .gh-count {
   position: relative;
