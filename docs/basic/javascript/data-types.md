@@ -464,7 +464,3 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true // [!code e
 9007199254740991n + 1n === 9007199254740991n + 2n; // false
 BigInt(9007199254740991); // 9007199254740991n
 ```
-
-## Object.assign 和扩展运算法
-
-Object.assign 和扩展运算符（...）都是浅拷贝
