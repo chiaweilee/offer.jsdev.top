@@ -16,6 +16,6 @@ ECMAScript 5 也被称为 ES5 和 ECMAScript 2009。
 <br/>后续版本为 ECMAScript 2016、ECMAScript  2017 …… ECMAScript 2021。
 
 
-## Object.assign 和扩展运算法
+## Object.assign 和扩展运算符
 
 Object.assign 和扩展运算符（...）都是浅拷贝
