@@ -22,15 +22,15 @@ reference:
 
 ::: info 练一练
 输出结果是什么？为什么？
+
 ```js{4}
 const a = { c: 1 };
 const b = a;
 a.c = 2;
 console.log(b.c); // ?
 ```
+
 :::
-
-
 
 ## 数据类型检测
 
@@ -43,7 +43,7 @@ typeof 'str'; // string
 typeof undefined; // undefined
 typeof Symbol(); // symbol
 typeof 1n; // bigint
-typeof function(){}; // function
+typeof function () {}; // function
 
 typeof []; // object
 typeof {}; // object
@@ -53,7 +53,9 @@ typeof /a/; // object
 
 数组、对象、null、正则表达式都会被判断为 object。
 
-> 思考：如何正确判断数组、对象、null、正则表达式的类型？
+::: info 思考
+如何正确判断数组、对象、null、正则表达式的类型？
+:::
 
 ### instanceof
 
@@ -79,7 +81,7 @@ Symbol('a') instanceof Symbol; // false
 ```js
 [] instanceof Object; // true
 ({}) instanceof Object; // true
-(function(){}) instanceof Object; // true
+(function () {}) instanceof Object; // true
 /a/ instanceof Object; // true
 ```
 
@@ -96,7 +98,7 @@ Symbol('a') instanceof Symbol; // false
 true.constructor === Boolean; // true
 `str`.constructor === String; // true
 [].constructor === Array; // true
-(function(){}).constructor === Function; // true
+(function () {}).constructor === Function; // true
 ({}).constructor === Object; // true
 /a/.constructor === RegExp; // true
 ```
@@ -108,7 +110,7 @@ function Foo(){};
 Foo.prototype = new Array(); // 改变原型
 
 const foo = new Foo();
- 
+
 foo.constructor === Foo; // false // [!code error]
 foo.constructor === Array; // true // [!code error]
 Array.prototype.isPrototypeOf(foo);; // true // [!code error]
@@ -121,7 +123,7 @@ Object.prototype.toString.call(2); // [object Number]
 Object.prototype.toString.call(true); // [object Boolean]
 Object.prototype.toString.call('str'); // [object String]
 Object.prototype.toString.call([]); // [object Array]
-Object.prototype.toString.call(function(){}); // [object Function]
+Object.prototype.toString.call(function () {}); // [object Function]
 Object.prototype.toString.call({}); // [object Object]
 Object.prototype.toString.call(undefined); // [object Undefined]
 Object.prototype.toString.call(null); // [object Null]
@@ -132,7 +134,7 @@ Object.prototype.toString.call(null); // [object Null]
 数据、函数等类型作为 Object 的实例，都重写了 Object.toString 方法。
 
 ```js
-([1]).toString(); // 1 // [!code warning]
+[1].toString(); // 1 // [!code warning]
 Object.prototype.toString.call([1]); // [object Array]
 ```
 
@@ -152,15 +154,17 @@ obj.__proto__ === Array.prototype;
 Array.isArray(obj);
 
 // 可靠
-Object.prototype.toString.call(obj).slice(8,-1) === 'Array';
+Object.prototype.toString.call(obj).slice(8, -1) === 'Array';
 ```
 
 ::: info 小提示
 可以用前面手写的 typeof
+
 ```js
 import { typeOf } from 'sth';
 typeOf(obj) === 'array';
 ```
+
 :::
 
 ### 判断对象
@@ -175,15 +179,17 @@ obj instanceof Object;
 obj.__proto__ === Object.prototype;
 
 // 可靠
-Object.prototype.toString.call(obj).slice(8,-1) === 'Object';
+Object.prototype.toString.call(obj).slice(8, -1) === 'Object';
 ```
 
 ::: info 小提示
 可以用前面手写的 typeof
+
 ```js
 import { typeOf } from 'sth';
 typeOf(obj) === 'object';
 ```
+
 :::
 
 ## undefined 和 null
@@ -250,8 +256,8 @@ Number.isNaN(undefined); // false
 
 当对象类型进行类型转换时，会调用 JavaScript 内部的 toPrimitive 方法。
 
-* 当期望值为 number 时会调用 valueOf 方法。如果返回的值不是原始值，则继续调用 toString 方法。
-* 当期望值为 string 时会调用 toString 方法。如果返回的值不是原始值，则继续调用 valueOf 方法。
+- 当期望值为 number 时会调用 valueOf 方法。如果返回的值不是原始值，则继续调用 toString 方法。
+- 当期望值为 string 时会调用 toString 方法。如果返回的值不是原始值，则继续调用 valueOf 方法。
 
 ### valueOf 方法
 
@@ -261,8 +267,8 @@ true.valueOf(); // true
 new Date().valueOf(); // 1677469267035
 (function () {}).valueOf(); // f (){}
 (2).valueOf(); // 2
-({}.valueOf()); // {}
-"2".valueOf(); // '2'
+({}).valueOf(); // {}
+'2'.valueOf(); // '2'
 /a/.valueOf(); // /a/
 ```
 
@@ -274,8 +280,8 @@ true.toString(); // 'true'
 new Date().toString(); // Mon Feb 27 2023 11:42:26 GMT+0800 (China Standard Time)
 (function () {}).toString(); // function(){}
 (2).toString(); // '2'
-({}.toString()); // '[object Object]'}
-"2".toString(); // '2'
+({}).toString(); // '[object Object]'}
+'2'.toString(); // '2'
 /a/.toString(); // '/a/'
 ```
 
@@ -283,28 +289,28 @@ new Date().toString(); // Mon Feb 27 2023 11:42:26 GMT+0800 (China Standard Time
 
 如果 valueOf() 和 toString() 均不返回基本类型值，会产生 TypeError 错误。
 
-* Undefined 类型的值转换为 NaN。
+- Undefined 类型的值转换为 NaN。
 
 ```js
 Number(undefined); // NaN
 isNaN(undefined); // true
 ```
 
-* Null 类型的值转换为 0。
+- Null 类型的值转换为 0。
 
 ```js
 Number(null); // 0
 isNaN(null); // false
 ```
 
-* Boolean 类型的值，true 转换为 1，false 转换为 0。
+- Boolean 类型的值，true 转换为 1，false 转换为 0。
 
 ```js
 Number(true); // 1
 Number(false); // 0
 ```
 
-* String 类型的值转换如同使用 Number() 函数进行转换，如果包含非数字值则转换为 NaN，空字符串为 0。
+- String 类型的值转换如同使用 Number() 函数进行转换，如果包含非数字值则转换为 NaN，空字符串为 0。
 
 ```js
 Number(''); // 0
@@ -312,7 +318,7 @@ Number('1'); // 1
 Number('a'); // NaN
 ```
 
-* 对象（包括数组）会首先被转换为相应的基本类型值，如果返回的是非数字的基本类型值，则再遵循以上规则将其强制转换为数字。
+- 对象（包括数组）会首先被转换为相应的基本类型值，如果返回的是非数字的基本类型值，则再遵循以上规则将其强制转换为数字。
 
 ```js
 Number([]); // 0
@@ -325,21 +331,21 @@ Number([true]); // NaN
 
 ### 转字符串
 
-* null 转换为 'null'，undefined 转换为 'undefined'。
+- null 转换为 'null'，undefined 转换为 'undefined'。
 
 ```js
 String(null); // 'null'
 String(undefined); // 'undefined'
 ```
 
-* Boolean 类型，true 转换为 "true"，false 转换为 "false"。
+- Boolean 类型，true 转换为 "true"，false 转换为 "false"。
 
 ```js
 String(true); // 'true'
 String(false); // 'false'
 ```
 
-* Number 类型的值直接转换，不过那些极小和极大的数字会使用指数形式。
+- Number 类型的值直接转换，不过那些极小和极大的数字会使用指数形式。
 
 ```js
 String(1); // 1
@@ -347,7 +353,7 @@ String(Number.MAX_VALUE); // '1.7976931348623157e+308'
 String(Number.MAX_SAFE_INTEGER); // 9007199254740991
 ```
 
-* 对普通对象来说，除非自行定义 toString() 方法，否则会调用 toString()（Object.prototype.toString()）来返回内部属性 [[Class]] 的值，如"[object Object]"。如果对象有自己的 toString() 方法，字符串化时就会调用该方法并使用其返回值。
+- 对普通对象来说，除非自行定义 toString() 方法，否则会调用 toString()（Object.prototype.toString()）来返回内部属性 [[Class]] 的值，如"[object Object]"。如果对象有自己的 toString() 方法，字符串化时就会调用该方法并使用其返回值。
 
 ### 转布尔
 
@@ -371,7 +377,7 @@ String(Number.MAX_SAFE_INTEGER); // 9007199254740991
 
 ##### 除 String 外的原始数据类型，作算数运算符。
 
-* 进行算术运算时，原始数据类型转为数字使用 Number() 方法
+- 进行算术运算时，原始数据类型转为数字使用 Number() 方法
 
 ```js
 1 + null; // 1
@@ -382,7 +388,7 @@ null + null; // 0
 
 ##### String 类型及引用数据类型，作字符串链接符
 
-* 非 string 类型会转为 string 类型
+- 非 string 类型会转为 string 类型
 
 ```js
 [] + []; // ''
@@ -392,11 +398,11 @@ true + {}; // 'true[object Object]'
 undefined + {}; // 'undefined[object Object]'
 ```
 
-#### 算数运算符 - * /
+#### 算数运算符 - \* /
 
-* 非数字类型会转为数字类型
-* 如果是原始数据类型会调用 Number() 方法进行转换
-* 如果是引用数据类型会转换为数值，如果转换后不是数字则会返回 NaN。
+- 非数字类型会转为数字类型
+- 如果是原始数据类型会调用 Number() 方法进行转换
+- 如果是引用数据类型会转换为数值，如果转换后不是数字则会返回 NaN。
 
 ```js
 2 - '1'; // 1
@@ -415,7 +421,7 @@ undefined + {}; // 'undefined[object Object]'
 
 #### 逻辑运算符 && || !
 
-* 非布尔类型会转为布尔类型
+- 非布尔类型会转为布尔类型
 
 ```js
 1 && 2; // 2
@@ -430,9 +436,9 @@ undefined + {}; // 'undefined[object Object]'
 
 #### 比较运算符 == > <
 
-* null == undefined 不会进行转换，总返回true
-* 引用数据类型，会先转换为string（先调用valueOf，后调用toString），再转换为number
-* 如果 == 左右都是引用数据类型，会进行地址比较
+- null == undefined 不会进行转换，总返回 true
+- 引用数据类型，会先转换为 string（先调用 valueOf，后调用 toString），再转换为 number
+- 如果 == 左右都是引用数据类型，会进行地址比较
 
 ```js
 '1' == 1; // true
@@ -446,13 +452,74 @@ undefined > null; // false
 1 < []; // false
 ```
 
-* === 不会进行类型转换，直接判断
+- === 不会进行类型转换，直接判断
 
 ```js
-'1' ==- 1; // false
+'1' == -1; // false
 undefined === null; // false
 0 === []; // false
 [] === []; // false
+```
+
+## || 和 &&
+
+|| 和 && 都只对第一个值进行条件判断，并根据判断结果返回其中一个值。
+
+|| 对第一个值进行条件判断，如果判断结果为 true 就返回第一个值，为 false 就返回第二个值。
+
+提示：条件判断时，如果不是布尔值就先强制转换为布尔类型，然后再进行条件判断。
+
+```js
+1 || 0; // 因为第一个值 1 判断为 true，所以返回第一个值 1
+0 || 1; // 因为第一个值 0 判断为 false，所以返回第二个值 1
+
+const a = () => {
+  console.log('a');
+  return 1;
+};
+const b = () => {
+  console.log('b');
+  return 0;
+};
+
+a() || b(); // 输出为 a，返回值为 1
+b() || a(); // 输出为 b a，返回值为 1
+```
+
+&& 对第一个值进行判断，如果判断结果为 true 就返回第二个值，为 false 就返回第一个值。
+
+```js
+1 && 0; // 因为第一个值 1 判断为 true，所以返回第一个值 0
+0 && 1; // 因为第一个值 0 判断为 false，所以返回第二个值 0
+
+const a = () => {
+  console.log('a');
+  return 1;
+};
+const b = () => {
+  console.log('b');
+  return 0;
+};
+
+a() && b(); // 输出为 a b，返回值为 0
+b() && a(); // 输出为 b，返回值为 0
+```
+
+## == 和 ===
+
+- 双等号（==）进行判断时，如果两边类型不一致，会强制转换类型后再进行比较。
+- 三等号（===）进行判断时，如果两边类型不一致，不强制转换类型，直接返回 false。
+
+## Object.is()
+
+Object.is() 一般情况和三等号（===）相同，但处理了一些特殊情况，比如 -0 和 +0 不再相等，两个 NaN 是相等的。
+
+```js
+-0 === +0; // true
+NaN === NaN; // false
+
+Object.is(-0, +0); // false
+Object.is(NaN, NaN); // true
 ```
 
 ## BigInt

@@ -29,7 +29,7 @@ job-models:
   - title: P5 基础扎实
     subtitle: 12-20K
     details: 前端工程师
-    link: /guide/p5
+    link: /guide/getting-started
     skill:
       - true
       - true
@@ -40,7 +40,7 @@ job-models:
   - title: P6 独当一面
     subtitle: 16-30K
     details: 资深前端工程师
-    link: /guide/p6
+    link: /guide/getting-started
     skill:
       - true
       - true
@@ -51,18 +51,18 @@ job-models:
   - title: P7 领域专家
     subtitle: 25-40K
     details: 前端技术专家
-    link: /guide/p7
+    link: /guide/getting-started
     skill:
       - true
       - true
       - true
       - true
       - true
-      - false
+      - true
   - title: P8 领域突破
     subtitle: 35-60K
     details: 高级前端技术专家
-    link: /guide/p8
+    link: /guide/getting-started
     skill:
       - true
       - true
