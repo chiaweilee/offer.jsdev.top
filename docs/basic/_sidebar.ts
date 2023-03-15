@@ -11,6 +11,7 @@ export default [
     items: [
       { text: '数据类型', link: '/basic/javascript/data-types' },
       { text: '二进制', link: '/basic/javascript/binary' },
+      { text: 'Function', link: '/basic/javascript/function' },
       { text: 'ES6', link: '/basic/javascript/es6' },
     ],
   },
