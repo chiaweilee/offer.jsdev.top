@@ -15,7 +15,7 @@ function PlainObject(a: any) {
   };
 }
 
-function IntNumber(a: number) {
+function Return(a: number) {
   this.b = 2;
   return a;
 }
@@ -26,10 +26,18 @@ test('new', () => {
   expect(person.age).toBe(18);
   expect(person.introduce()).toBe('My name is Li Lei, 18 years old.');
 
-  const object: any = New(PlainObject, [1]);
-  expect(object.a).toBe(1);
+  const object: any = New(PlainObject, [0]);
+  expect(object.a).toBe(0);
   expect(object.b).toBe(undefined);
 
-  const number: any = New(IntNumber, [1]);
-  expect(number).toEqual({ b: 2 });
+  expect(New(Return, [0])).toEqual({ b: 2 });
+  expect(New(Return, [null])).toEqual({ b: 2 });
+  expect(New(Return, [undefined])).toEqual({ b: 2 });
+  expect(New(Return, [/a/])).toEqual(/a/);
+  expect(New(Return, [[]])).toEqual([]);
+  expect(New(Return, [PlainObject])).toBe(PlainObject);
+
+  expect(() => {
+    New(null, [PlainObject])
+  }).toThrow();
 });

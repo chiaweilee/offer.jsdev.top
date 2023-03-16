@@ -1,14 +1,13 @@
-export function New(constructor: unknown, argv: any): object | void {
+export function New(constructor: unknown, argv: any): object {
   if (typeof constructor !== 'function') {
-    console.error('type error');
-    return;
+    throw new Error(`Uncaught TypeError: constructor should be a function`);
   }
   // 创建一个原型为构造函数的新对象
   const obj = Object.create(constructor.prototype);
-  // this 指向对象并执行构造函数
+  // 执行构造函数，并将 this 指向对象
   const res = constructor.apply(obj, argv);
   // 执行结果是引用类型，则返回执行结果；是值类型，则返回创建的对象
-  if (res && (typeof res === 'object' || typeof res === 'function')) {
+  if (res !== null && (typeof res === 'object' || typeof res === 'function')) {
     return res;
   } else {
     return obj;
