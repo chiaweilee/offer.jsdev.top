@@ -15,4 +15,12 @@ export default [
       { text: 'ES6', link: '/basic/javascript/es6' },
     ],
   },
+  {
+    text: '设计模式',
+    link: '/basic/javascript/design-pattern'
+  },
+  {
+    text: '手写代码',
+    link: '/basic/javascript/handwriting'
+  },
 ];
