@@ -1,4 +1,4 @@
-export function New(constructor: unknown, argv: any): object {
+export function New(constructor: unknown, argv: any[]): object {
   if (typeof constructor !== 'function') {
     throw new Error(`Uncaught TypeError: constructor should be a function`);
   }
