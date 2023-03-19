@@ -44,3 +44,31 @@ new 执行过程：
 3. 返回值是基本数据类型，返回新创建的对象；是引用数据类型，返回这个引用数据类型对象。
 
 <!--@include: ../../interview/questions/write-new.md-->
+
+## 箭头函数
+
+箭头函数不能作为构造函数使用。
+
+箭头函数没有 arguments。
+
+箭头函数没有 prototype。
+
+箭头函数中 this 的指向在它在定义时已经确定了，且之后不会改变。
+<br/>箭头函数会继承自己作用域的上一层的 this 。
+
+```js
+// ES6 
+function getArrow() {
+  return () => {
+    console.log(this); 
+  };
+}
+
+// ES5，由 Babel 转译
+function getArrow() { 
+  var _this = this; 
+  return function () { 
+    console.log(_this); 
+  }; 
+}
+```

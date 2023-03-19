@@ -11,7 +11,7 @@ function Person(name: string, age: number) {
   };
 }
 
-const person: any = New(Person, ['Li Lei', 18]);
+const person: any = New(Person, 'Li Lei', 18);
 person.name ; // 'Li Lei'
 person.age; //18
 person.introduce(); // 'My name is Li Lei, 18 years old.'
@@ -23,7 +23,7 @@ function PlainObject(a: any) {
   };
 }
 
-const object: any = New(PlainObject, [1]);
+const object: any = New(PlainObject, 1);
 object.a; // 1
 
 function IntNumber(a: number) {
