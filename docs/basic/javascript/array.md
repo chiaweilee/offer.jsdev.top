@@ -12,3 +12,24 @@
 * 查找特定项的索引的方法， indexOf() 和 lastIndexOf() 。
 * 迭代方法 every()、some()、filter()、map() 和 forEach() 方法 。
 * 数组归并方法 reduce() 和 reduceRight() 方法 。
+
+## 类数组
+
+类数组不能直接调用数组的方法，但是又和数组比较类似，拥有 length 属性。
+
+常见的类数组有：
+* arguments
+* getElementsByTagName/ClassName/Name 返回的 HTMLCollection
+* querySelector 返回的 NodeList
+
+常见的类数组转换为数组的方法：
+* `Array.prototype.slice.call(arrayLike);`
+* `Array.prototype.splice.call(arrayLike, 0);`
+* `Array.prototype.concat.apply([], arrayLike);`
+* `Array.from(arrayLike);`
+
+```js
+(function () {
+  return Array.prototype.slice.call(arguments);
+})(1, 2); // [1, 2]
+```
