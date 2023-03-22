@@ -1,4 +1,4 @@
-export function New(...argv: any): object {
+export function New(...argv: any): object | Function {
   const constructor: unknown = Array.prototype.shift.call(arguments);
   if (typeof constructor !== 'function') {
     throw new Error(`Uncaught TypeError: constructor should be a function`);
