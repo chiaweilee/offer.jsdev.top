@@ -37,6 +37,9 @@ test('new', () => {
   expect(New(Return, [])).toEqual([]);
   expect(New(Return, PlainObject)).toBe(PlainObject);
 
+  function Fn() {}
+  expect(New(Return, Fn)).toBe(Fn);
+
   expect(() => {
     New(null, PlainObject)
   }).toThrow();
