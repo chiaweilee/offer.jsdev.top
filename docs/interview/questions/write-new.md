@@ -1,5 +1,5 @@
 ::: code-group
-<<< @/../packages/sth/src/dataTypes/new.ts [源代码：手写 new]
+<<< @/../packages/sth/src/new.ts [源代码：手写 new]
 ```js [代码效果]
 import { New } from 'sth';
 
