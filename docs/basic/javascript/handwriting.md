@@ -14,6 +14,6 @@
 
 ### 手写 new
 
-相关知识：[JavaScript-function-new](/basic/javascript/function#new)
+相关知识：[JavaScript-函数-new](/basic/javascript/function#new)
 
 <!--@include: ../../interview/questions/write-new.md-->
