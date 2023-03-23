@@ -14,6 +14,7 @@ export default [
       { text: '函数', link: '/basic/javascript/function' },
       { text: '数组', link: '/basic/javascript/array' },
       { text: 'ES6', link: '/basic/javascript/es6' },
+      { text: '原型链', link: '/basic/javascript/prototype' },
     ],
   },
   {
