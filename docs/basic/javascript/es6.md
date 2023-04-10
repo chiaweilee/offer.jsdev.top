@@ -19,3 +19,22 @@ ECMAScript 5 也被称为 ES5 和 ECMAScript 2009。
 ## Object.assign 和扩展运算符
 
 Object.assign 和扩展运算符（...）都是浅拷贝
+
+## 模板语法
+
+```js
+const name = 'World';
+const text = `Hello, ${name}!`;
+```
+
+* 在模板字符串中，空格、缩进、换行都会被保留
+* 模板字符串完全支持“运算”式的表达式，可以在${}里完成一些计算
+
+```js
+const html = `
+  <ul>
+    <li>1</li>
+    <li>${1 + 1}</li>
+  </ul>
+`;
+```
