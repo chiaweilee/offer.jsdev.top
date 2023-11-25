@@ -23,7 +23,7 @@ skill-name:
   - 框架
   - 工程化
   - 领域专精
-  - 架构规划
+  - 架构/管理
 
 job-models:
   - title: P5 基础扎实
@@ -58,7 +58,7 @@ job-models:
       - true
       - true
       - true
-      - true
+      - false
   - title: P8 领域突破
     subtitle: 35-60K
     details: 高级前端技术专家

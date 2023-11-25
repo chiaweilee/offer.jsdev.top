@@ -1,5 +1,9 @@
+:root {
+  --vp-c-brand-secondary: #647eff;
+}
+
 .VPHome .VPHero.VPHomeHero .container .main .name .clip {
-  background: linear-gradient(to right , #42d392 , #647eff);
+  background: linear-gradient(to right , var(--vp-c-brand) , var(--vp-c-brand-secondary));
   background-size: 200% 200%;
   animation: clip 16s infinite;
   background-clip: text;
@@ -19,6 +23,18 @@
   }
 }
 
+@keyframes bg-slide {
+  0% {
+    background-position: 0 90%;
+  }
+  50% {
+    background-position: 90% 0%;
+  }
+  100% {
+    background-position: 0% 90%;
+  }
+}
+
 .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand,
 .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
   font-size: 16px;
@@ -33,6 +49,13 @@
   padding-left: 48px;
 }
 
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand {
+  background-image: radial-gradient(closest-side,var(--vp-c-brand) 6%,var(--vp-c-brand-secondary) 50%,var(--vp-c-brand) 100%);
+  background-size: 200% 600%;
+  background-color: transparent;
+  border: none;
+  animation: bg-slide 16s infinite;
+}
 
 .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand::before,
 .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt::before {
