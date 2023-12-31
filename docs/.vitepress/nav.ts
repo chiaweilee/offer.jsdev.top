@@ -12,7 +12,7 @@ function nav() {
     { text: '架构/管理', link: '/master/', activeMatch: '/master/' },
     { text: '', link: '', activeMatch: '' }, // separator
     { text: '简历优化', link: '/resume/', activeMatch: '/resume/' },
-    { text: '面试题', link: '/interview/questions/', activeMatch: '/interview/' },
+    { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
     { text: '内推', link: '/recommendation/', activeMatch: '/recommendation/' },
     { text: '', link: '', activeMatch: '' }, // separator
     { text: 'sth@' + pkg.version, link: '/sth/', activeMatch: '/sth/' },

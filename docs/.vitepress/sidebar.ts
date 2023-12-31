@@ -5,6 +5,7 @@ import framework from '../framework/_sidebar';
 import project from '../project/_sidebar';
 import expert from '../expert/_sidebar';
 import master from '../master/_sidebar';
+import interview from '../interview/_sidebar';
 
 function sidebar() {
   return {
@@ -15,6 +16,7 @@ function sidebar() {
     '/project/': project,
     '/expert/': expert,
     '/master/': master,
+    '/interview/': interview,
   };
 }
 

@@ -5,6 +5,6 @@ export default [
   },
   {
     text: 'React',
-    items: [],
+    items: [{ text: '组件', link: '/framework/react/component' }],
   },
 ];

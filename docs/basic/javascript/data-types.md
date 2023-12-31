@@ -524,14 +524,39 @@ b() && a(); // 输出为 b，返回值为 0
 
 ## Object.is()
 
-Object.is() 一般情况和三等号（===）相同，但处理了一些特殊情况，比如 -0 和 +0 不再相等，两个 NaN 是相等的。
+Object.is() 一般情况和三等号（===）相同。
 
 ```js
--0 === +0; // true
-NaN === NaN; // false
+Object.is(25, 25); // true
+Object.is("foo", "foo"); // true
+Object.is("foo", "bar"); // false
+Object.is(null, null); // true
+Object.is(undefined, undefined); // true
+Object.is(window, window); // true
+Object.is([], []); // false
 
-Object.is(-0, +0); // false
-Object.is(NaN, NaN); // true
+const foo = { a: 1 };
+const bar = { a: 1 };
+const sameFoo = foo;
+Object.is(foo, foo); // true
+Object.is(foo, bar); // false
+Object.is(foo, sameFoo); // true
+```
+
+Object.is() 处理了一些特殊情况，比如：
+
+```js
+0 === -0; // true
++0 === -0; // true // [!code error]
+-0 === -0; // true
+Object.is(0, -0); // false
+Object.is(+0, -0); // false // [!code error]
+Object.is(-0, -0); // true
+```
+
+```js
+NaN === NaN; // false // [!code error]
+Object.is(NaN, NaN); // true // [!code error]
 ```
 
 ## BigInt

@@ -13,8 +13,9 @@ reference:
 
 构造函数比较特殊， new 一个没有 return 的构造函数，默认返回新创建的对象。
 <br/>而有 return 时有两种情况：
-* 返回值为基本数据类型，则返回新创建的对象，即 this。
-* 返回值为引用数据类型，返回这个引用数据类型对象，丢弃 this。
+
+- 返回值为基本数据类型，则返回新创建的对象，即 this。
+- 返回值为引用数据类型，返回这个引用数据类型对象，丢弃 this。
 
 ```js
 function IntNumber(a) {
@@ -39,6 +40,7 @@ new PlainObject(1); // { a: 1 }
 ## new
 
 new 执行过程：
+
 1. 创建一个原型为构造函数的新对象
 2. 执行构造函数，并将 this 指向对象
 3. 返回值是基本数据类型，返回新创建的对象；是引用数据类型，返回这个引用数据类型对象。
@@ -57,18 +59,18 @@ new 执行过程：
 <br/>箭头函数会继承自己作用域的上一层的 this 。
 
 ```js
-// ES6 
+// ES6
 function getArrow() {
   return () => {
-    console.log(this); 
+    console.log(this);
   };
 }
 
 // ES5，由 Babel 转译
-function getArrow() { 
-  var _this = this; 
-  return function () { 
-    console.log(_this); 
-  }; 
+function getArrow() {
+  var _this = this;
+  return function () {
+    console.log(_this);
+  };
 }
 ```
