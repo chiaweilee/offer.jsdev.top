@@ -132,7 +132,7 @@ defineProps<{
   clear: both;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-gray);
+  color: var(--vp-c-bg-soft-mute);
 }
 
 .dark .skill {

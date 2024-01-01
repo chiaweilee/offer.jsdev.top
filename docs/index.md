@@ -26,7 +26,7 @@ skill-name:
   - 架构/管理
 
 job-models:
-  - title: P5 基础扎实
+  - title: P5 基础过硬
     subtitle: 12-20K
     details: 前端工程师
     link: /guide/getting-started
@@ -37,7 +37,7 @@ job-models:
       - false
       - false
       - false
-  - title: P6 独当一面
+  - title: P6 技术全面
     subtitle: 16-30K
     details: 资深前端工程师
     link: /guide/getting-started
