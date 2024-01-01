@@ -7,6 +7,7 @@ export default [
     text: '管理',
     items: [
       { text: '项目管理', link: '/master/pm' },
+      { text: '技术管理', link: '/master/tm' },
       { text: '团队管理', link: '/master/tl' },
     ],
   },
