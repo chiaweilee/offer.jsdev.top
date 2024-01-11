@@ -1,5 +1,17 @@
 export default [
   {
+    text: '动态规划',
+    items: [],
+  },
+  {
+    text: '树',
+    items: [],
+  },
+  {
+    text: '栈',
+    items: [],
+  },
+  {
     text: '位运算',
     items: [
       { text: '136. 只出现一次的数字', link: '/algorithm/single-number' },
