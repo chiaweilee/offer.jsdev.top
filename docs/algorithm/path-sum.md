@@ -12,8 +12,8 @@ reference:
 ## 深度优先
 
 ::: info 解题思路
-- 深度优先遍历一条路径上的节点，并计算路径节点之合
-- 如果已经没有子节点，且路径节点之合刚好等于 targetSum，则返回 true
+- 深度优先遍历一条路径上的节点，并计算路径节点之和
+- 如果已经没有子节点，且路径节点之和刚好等于 targetSum，则返回 true
 :::
 
 ::: details 参考答案
@@ -35,8 +35,8 @@ function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
 ## 广度优先
 
 ::: info 解题思路
-- 广度优先遍历节点，并计算路径节点之合
-- 如果已经没有子节点，且路径节点之合刚好等于 targetSum，则返回 true
+- 广度优先遍历节点，并计算路径节点之和
+- 如果已经没有子节点，且路径节点之和刚好等于 targetSum，则返回 true
 :::
 
 ::: details 参考答案

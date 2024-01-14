@@ -5,7 +5,7 @@ export default [
   },
   {
     text: '动态规划',
-    items: [],
+    items: [{ text: '53. 最大子数组和', link: '/algorithm/maximum-subarray'}],
   },
   {
     text: '树',
