@@ -4,7 +4,11 @@ typeOf(2); // number
 typeOf(true); // boolean
 
 // 正确判断引用数据类型
+typeof []; // object
 typeOf([]); // array
-typeOf({}); // object
+
+typeof null; // object
 typeOf(null); // null
+
+typeof /a/; // object
 typeOf(/a/); // regexp
