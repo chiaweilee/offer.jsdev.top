@@ -12,6 +12,10 @@ export default [
     items: [],
   },
   {
+    text: '双指针',
+    items: [{ text: '88. 合并两个有序数组', link: '/algorithm/merge-sorted-array' }],
+  },
+  {
     text: '滑动窗口',
     items: [{ text: '3. 无重复字符的最长子串', link: '/algorithm/longest-substring-without-repeating-characters' }],
   },
