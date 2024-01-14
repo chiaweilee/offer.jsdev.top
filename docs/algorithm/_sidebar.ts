@@ -5,7 +5,10 @@ export default [
   },
   {
     text: '树',
-    items: [],
+    items: [
+      { text: '112. 路径总和', link: '/algorithm/path-sum' },
+      { text: '129. 求根节点到叶节点数字之和', link: '/algorithm/sum-root-to-leaf-numbers' },
+    ],
   },
   {
     text: '栈',
@@ -17,7 +20,12 @@ export default [
   },
   {
     text: '滑动窗口',
-    items: [{ text: '3. 无重复字符的最长子串', link: '/algorithm/longest-substring-without-repeating-characters' }],
+    items: [
+      {
+        text: '3. 无重复字符的最长子串',
+        link: '/algorithm/longest-substring-without-repeating-characters',
+      },
+    ],
   },
   {
     text: '位运算',
