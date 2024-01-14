@@ -1,5 +1,9 @@
 export default [
   {
+    text: '简单入门',
+    items: [{ text: '1. 两数之和', link: '/algorithm/two-sum' }],
+  },
+  {
     text: '动态规划',
     items: [],
   },
