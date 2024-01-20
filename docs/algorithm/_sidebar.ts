@@ -5,7 +5,7 @@ export default [
   },
   {
     text: '动态规划',
-    items: [{ text: '53. 最大子数组和', link: '/algorithm/maximum-subarray'}],
+    items: [{ text: '53. 最大子数组和', link: '/algorithm/maximum-subarray' }],
   },
   {
     text: '树',
@@ -20,7 +20,10 @@ export default [
   },
   {
     text: '双指针',
-    items: [{ text: '88. 合并两个有序数组', link: '/algorithm/merge-sorted-array' }],
+    items: [
+      { text: '88. 合并两个有序数组', link: '/algorithm/merge-sorted-array' },
+      { text: '165. 比较版本号', link: '/algorithm/compare-version-numbers' },
+    ],
   },
   {
     text: '滑动窗口',
