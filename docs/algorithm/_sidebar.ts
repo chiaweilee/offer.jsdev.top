@@ -1,6 +1,6 @@
 export default [
   {
-    text: '简单入门',
+    text: '哈希表',
     items: [{ text: '1. 两数之和', link: '/algorithm/two-sum' }],
   },
   {
