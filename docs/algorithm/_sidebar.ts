@@ -5,7 +5,10 @@ export default [
   },
   {
     text: '动态规划',
-    items: [{ text: '53. 最大子数组和', link: '/algorithm/maximum-subarray' }],
+    items: [
+      { text: '53. 最大子数组和', link: '/algorithm/maximum-subarray' },
+      { text: '70. 爬楼梯', link: '/algorithm/climbing-stairs' },
+    ],
   },
   {
     text: '树',
