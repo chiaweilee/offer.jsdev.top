@@ -16,6 +16,10 @@ reference:
 输出：[[3],[9,20],[15,7]]
 ```
 
+::: info 解题思路
+广度优先
+:::
+
 ::: details 参考答案
 ```ts
 function levelOrder(root: TreeNode | null): number[][] {
