@@ -26,6 +26,7 @@ export default [
     items: [
       { text: '88. 合并两个有序数组', link: '/algorithm/merge-sorted-array' },
       { text: '165. 比较版本号', link: '/algorithm/compare-version-numbers' },
+      { text: '415. 字符串相加', link: '/algorithm/add-strings' },
     ],
   },
   {
