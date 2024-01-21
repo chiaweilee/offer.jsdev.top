@@ -30,6 +30,7 @@ function reset() {
 
 <template>
   <div style="padding-top: 14px">
+    <div>阶数：{{ n }}</div>
     <div>f({{ i - 2 }}): {{ fn2 }}</div>
     <div>f({{ i - 1 }}): {{ fn1 }}</div>
     <div>f({{ i }}): {{ fn }}</div>
