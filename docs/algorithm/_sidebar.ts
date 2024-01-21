@@ -20,8 +20,8 @@ export default [
     ],
   },
   {
-    text: '栈',
-    items: [],
+    text: '链表',
+    items: [{ text: '206. 反转链表', link: '/algorithm/reverse-linked-list' }],
   },
   {
     text: '双指针',

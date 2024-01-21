@@ -13,7 +13,7 @@ reference:
 
 示例：
 
-```
+```js
 输入：root = [3,9,20,null,null,15,7]
 输出：3
 ```
