@@ -41,6 +41,12 @@ export default [
     ],
   },
   {
+    text: '矩阵',
+    items: [
+      { text: '200. 岛屿数量', link: '/algorithm/number-of-islands' },
+      { text: '695. 岛屿的最大面积', link: '/algorithm/max-area-of-island' },
+    ],
+  },{
     text: '位运算',
     items: [{ text: '136. 只出现一次的数字', link: '/algorithm/single-number' }],
   },
