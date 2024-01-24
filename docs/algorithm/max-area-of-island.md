@@ -24,15 +24,15 @@ reference:
 function maxAreaOfIsland(grid: number[][]): number {
   let max = 0;
 
-  function sink(i, j, grid): number {
+  function sink(i, j): number {
     if (grid?.[i]?.[j] === 1) {
       grid[i][j] = 0;
       return (
         1 +
-        sink(i + 1, j, grid) +
-        sink(i - 1, j, grid) +
-        sink(i, j + 1, grid) +
-        sink(i, j - 1, grid)
+        sink(i + 1, j) +
+        sink(i - 1, j) +
+        sink(i, j + 1) +
+        sink(i, j - 1)
       );
     }
     return 0;
@@ -41,7 +41,7 @@ function maxAreaOfIsland(grid: number[][]): number {
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[i].length; j++) {
       if (grid[i][j] === 1) {
-        max = Math.max(max, sink(i, j, grid));
+        max = Math.max(max, sink(i, j));
       }
     }
   }
