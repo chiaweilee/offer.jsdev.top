@@ -41,9 +41,6 @@ import Demo from './demos/88.vue';
 
 ::: details 参考答案
 ```ts
-/**
- Do not return anything, modify nums1 in-place instead.
- */
 function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   // 定义双指针
   let i = m - 1;

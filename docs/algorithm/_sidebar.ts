@@ -17,6 +17,7 @@ export default [
       { text: '102. 二叉树的层序遍历', link: '/algorithm/binary-tree-level-order-traversal' },
       { text: '112. 路径总和', link: '/algorithm/path-sum' },
       { text: '129. 求根节点到叶节点数字之和', link: '/algorithm/sum-root-to-leaf-numbers' },
+      { text: '429. N 叉树的层序遍历', link: '/algorithm/n-ary-tree-level-order-traversal' },
     ],
   },
   {

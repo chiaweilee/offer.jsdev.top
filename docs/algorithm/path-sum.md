@@ -43,14 +43,14 @@ function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
 ```ts
 function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
   if (root === null) return false;
-  const stack: [TreeNode | null, number][] = [[root, root.val]];
-  while (stack.length > 0) {
-    const [node, sum] = stack.shift();
+  const queue: [TreeNode | null, number][] = [[root, root.val]];
+  while (queue.length > 0) {
+    const [node, sum] = queue.shift();
     if (node.left === null && node.right === null) {
       if (sum === targetSum) return true;
     } else {
-      if (node.left !== null) stack.push([node.left, sum + node.left.val]);
-      if (node.right !== null) stack.push([node.right, sum + node.right.val]);
+      if (node.left !== null) queue.push([node.left, sum + node.left.val]);
+      if (node.right !== null) queue.push([node.right, sum + node.right.val]);
     }
   }
   return false;

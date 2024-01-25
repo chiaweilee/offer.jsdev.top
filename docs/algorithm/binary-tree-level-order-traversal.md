@@ -25,15 +25,15 @@ reference:
 function levelOrder(root: TreeNode | null): number[][] {
   const res = [];
   if (root ===null) return res;
-  const stack = [root];
-  while (stack.length > 0) {
-    let i = stack.length;
+  const queue = [root];
+  while (queue.length > 0) {
+    let i = queue.length;
     res.push([]);
     while (i > 0) {
-      const node = stack.shift();
+      const node = queue.shift();
       res[res.length - 1].push(node.val);
-      if (node.left !== null) stack.push(node.left);
-      if (node.right !== null) stack.push(node.right);
+      if (node.left !== null) queue.push(node.left);
+      if (node.right !== null) queue.push(node.right);
       i--;
     }
   }

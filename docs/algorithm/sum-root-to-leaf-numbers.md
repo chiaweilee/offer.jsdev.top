@@ -41,9 +41,9 @@ function sumNumbers(root: TreeNode | null): number {
 function sumNumbers(root: TreeNode | null): number {
   if (root === null) return 0;
   let sum: number = 0;
-  const stack: [TreeNode | null, number][] = [[root, root.val]];
+  const queue: [TreeNode | null, number][] = [[root, root.val]];
   while (nodeQueue.length > 0) {
-    const [node, preSum] = stack.shift();
+    const [node, preSum] = queue.shift();
     if (node.left === null && node.right === null) {
       sum += preSum;
     } else {
