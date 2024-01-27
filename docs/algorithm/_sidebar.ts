@@ -53,6 +53,10 @@ export default [
     ],
   },
   {
+    text: '堆',
+    items: [{ text: '215. 数组中的第K个最大元素', link: '/algorithm/kth-largest-element-in-an-array' }],
+  },
+  {
     text: '位运算',
     items: [{ text: '136. 只出现一次的数字', link: '/algorithm/single-number' }],
   },
