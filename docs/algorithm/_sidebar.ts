@@ -3,7 +3,7 @@ export default [
     text: '哈希表',
     items: [
       { text: '1. 两数之和', link: '/algorithm/two-sum' },
-      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' }
+      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' },
     ],
   },
   {
@@ -31,6 +31,7 @@ export default [
       { text: '70. 爬楼梯', link: '/algorithm/climbing-stairs' },
       { text: '121. 买卖股票的最佳时机', link: '/algorithm/best-time-to-buy-and-sell-stock' },
       { text: '5. 最长回文子串', link: '/algorithm/longest-palindromic-substring' },
+      { text: '42. 接雨水', link: '/algorithm/longest-palindromic-substring' },
     ],
   },
   {
@@ -65,14 +66,16 @@ export default [
   },
   {
     text: '堆',
-    items: [{ text: '215. 数组中的第K个最大元素', link: '/algorithm/kth-largest-element-in-an-array' }],
+    items: [
+      { text: '215. 数组中的第K个最大元素', link: '/algorithm/kth-largest-element-in-an-array' },
+      {
+        text: '912. 排序数组',
+        link: '/algorithm/sort-an-array',
+      },
+    ],
   },
   {
     text: '位运算',
     items: [{ text: '136. 只出现一次的数字', link: '/algorithm/single-number' }],
   },
-  {
-    text: '912. 排序数组',
-    link: '/algorithm/sort-an-array'
-  }
 ];
