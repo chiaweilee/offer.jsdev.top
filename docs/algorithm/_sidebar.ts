@@ -53,6 +53,10 @@ export default [
     ],
   },
   {
+    text: '栈',
+    items: [{ text: '20. 有效的括号', link: '/algorithm/valid-parentheses' }],
+  },
+  {
     text: '堆',
     items: [{ text: '215. 数组中的第K个最大元素', link: '/algorithm/kth-largest-element-in-an-array' }],
   },

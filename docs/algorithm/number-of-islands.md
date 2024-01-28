@@ -32,6 +32,14 @@ reference:
 - 找到陆地时，让与这块陆地相邻的陆地都变成海水，这样就不会重复计算了
 :::
 
+<script setup>
+import Demo from './demos/200.vue';
+</script>
+
+::: info 动画演示
+<Demo />
+:::
+
 ::: details 参考答案
 ```ts
 function numIslands(grid: string[][]): number {
