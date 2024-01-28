@@ -1,7 +1,10 @@
 export default [
   {
     text: '哈希表',
-    items: [{ text: '1. 两数之和', link: '/algorithm/two-sum' }],
+    items: [
+      { text: '1. 两数之和', link: '/algorithm/two-sum' },
+      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' }
+    ],
   },
   {
     text: '双指针',
@@ -9,6 +12,7 @@ export default [
       { text: '88. 合并两个有序数组', link: '/algorithm/merge-sorted-array' },
       { text: '165. 比较版本号', link: '/algorithm/compare-version-numbers' },
       { text: '415. 字符串相加', link: '/algorithm/add-strings' },
+      { text: '15. 三数之和', link: '/algorithm/3sum' },
     ],
   },
   {
@@ -25,6 +29,8 @@ export default [
     items: [
       { text: '53. 最大子数组和', link: '/algorithm/maximum-subarray' },
       { text: '70. 爬楼梯', link: '/algorithm/climbing-stairs' },
+      { text: '121. 买卖股票的最佳时机', link: '/algorithm/best-time-to-buy-and-sell-stock' },
+      { text: '5. 最长回文子串', link: '/algorithm/longest-palindromic-substring' },
     ],
   },
   {
@@ -50,6 +56,7 @@ export default [
     items: [
       { text: '200. 岛屿数量', link: '/algorithm/number-of-islands' },
       { text: '695. 岛屿的最大面积', link: '/algorithm/max-area-of-island' },
+      { text: '54. 螺旋矩阵', link: '/algorithm/spiral-matrix' },
     ],
   },
   {
@@ -64,4 +71,8 @@ export default [
     text: '位运算',
     items: [{ text: '136. 只出现一次的数字', link: '/algorithm/single-number' }],
   },
+  {
+    text: '912. 排序数组',
+    link: '/algorithm/sort-an-array'
+  }
 ];
