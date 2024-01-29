@@ -1,3 +1,10 @@
+---
+reference:
+  - title: 详解Scrum的框架模型以及三种角色
+    href: https://www.teambition.com/community/334.html
+    site: teambition
+---
+
 # Scrum 敏捷开发
 
 传统瀑布开发模式开发周期长，一般为3-6个月，不可控因素多、风险大。
@@ -36,6 +43,8 @@ Sprint冲刺列表
 ### 燃尽图
 
 燃尽图指的是当前剩余的工作量，可以很好地跟踪项目进展。
+
+![燃尽图](https://www.teambition.com/community/wp-content/uploads/2023/12/111n7dc35280f1b52c7ac5f8103cdb5b0eeb.jpg)
 
 ## 四个会议
 
@@ -97,6 +106,8 @@ SM 需要全局观察每个人的任务排序和时间，观察上下游任务�
 - Done 存放已测试且已验收通过的任务卡片
 
 任务卡片在各个管道中的流动就是燃尽图的动态表现。通过看板，能够很直观的发现项目瓶颈。
+
+![看板](https://www.teambition.com/community/wp-content/uploads/2023/12/312i4b63f0e3123efd4c9834c5b58584a9a1.jpg)
 
 ## 敏捷开发的价值
 
