@@ -7,6 +7,7 @@ import expert from '../expert/_sidebar';
 import master from '../master/_sidebar';
 import interview from '../interview/_sidebar';
 import sth from '../sth/_sidebar';
+import resume from '../resume/_sidebar';
 
 function sidebar() {
   return {
@@ -19,6 +20,7 @@ function sidebar() {
     '/master/': master,
     '/interview/': interview,
     '/sth/': sth,
+    '/resume/': resume,
   };
 }
 
