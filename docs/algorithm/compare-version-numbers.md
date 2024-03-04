@@ -27,6 +27,13 @@ reference:
 解释：忽略前导零，"01" 和 "001" 都表示相同的整数 "1"
 ```
 
+::: info 解题思路
+- 拆解字符串为数组
+- 遍历比较数字
+  - 缺位补 0
+  - 有大小，返回结果；相等比较下一位
+:::
+
 ::: details 参考答案
 ```ts
 function compareVersion(version1: string, version2: string): number {

@@ -22,6 +22,11 @@ reference:
 import Demo from './demos/415.vue';
 </script>
 
+::: info 解题思路
+- 从个位开始相加
+- 记录进位
+:::
+
 ::: info 动画演示
 <Demo />
 :::
