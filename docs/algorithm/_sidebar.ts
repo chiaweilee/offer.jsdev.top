@@ -3,7 +3,6 @@ export default [
     text: '哈希表',
     items: [
       { text: '1. 两数之和', link: '/algorithm/two-sum' },
-      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' },
     ],
   },
   {
@@ -50,7 +49,11 @@ export default [
   },
   {
     text: '链表',
-    items: [{ text: '206. 反转链表', link: '/algorithm/reverse-linked-list' }],
+    items: [
+      { text: '206. 反转链表', link: '/algorithm/reverse-linked-list' },
+      { text: '02.02. 返回倒数第 k 个节点', link: '/algorithm/kth-node-from-end-of-list-lcci' },
+      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' },
+    ],
   },
   {
     text: '矩阵',
