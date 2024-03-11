@@ -18,14 +18,14 @@ reference:
 输出："134"
 ```
 
-<script setup>
-import Demo from './demos/415.vue';
-</script>
-
 ::: info 解题思路
 - 从个位开始相加
 - 记录进位
 :::
+
+<script setup>
+import Demo from './demos/415.vue';
+</script>
 
 ::: info 动画演示
 <Demo />

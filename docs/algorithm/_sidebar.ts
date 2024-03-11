@@ -50,6 +50,7 @@ export default [
   {
     text: '链表',
     items: [
+      { text: '21. 合并两个有序链表', link: '/algorithm/merge-two-sorted-lists' },
       { text: '206. 反转链表', link: '/algorithm/reverse-linked-list' },
       { text: '02.02. 返回倒数第 k 个节点', link: '/algorithm/kth-node-from-end-of-list-lcci' },
       { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' },
