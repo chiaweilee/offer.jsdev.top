@@ -1,3 +1,10 @@
+---
+reference:
+  - title: 「2021」高频前端面试题汇总之React篇（上）
+    href: https://juejin.cn/post/6941546135827775525
+    site: CUGGZ
+---
+
 # 组件
 
 ## React.Component 和 React.PureComponent
@@ -66,3 +73,39 @@ for (let i = 0; i < keysA.length; i++) {
 ```js
 return true;
 ```
+
+## HOC
+
+高阶组件是参数为组件，返回值为新组件的函数
+
+```jsx
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+```
+
+组件是将 props 转换为 UI，而高阶组件是将组件转换为另一个组件。
+HOC 在 React 的第三方库中很常见，例如 Redux 的 connect。
+- 优点：逻辑复用，不影响被包裹组件内部逻辑。
+- 缺点：prop 重名会覆盖
+
+## Render Props
+
+Render Props 是一种在 React 组件之间使用一个值为函数的 prop 共享代码的简单技术
+
+```jsx
+<DataProvider render={data => (
+  <h1>Hello {data.target}</h1>
+)}/>
+```
+
+- 优点：数据共享、代码复用，将子组件的 state 作为 props 传递给父组件，由父组件控制渲染逻辑
+- 缺点：容易陷入嵌套地狱
+
+*大多数场景下，Render Props 可以用自定义 Hooks 代替*
+
+## Hooks
+
+Hooks 可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+Hooks 解决了 HOC 的 prop 覆盖问题，同时也解决了 Render Props 的嵌套地狱问题。
+
+但需要注意：Hooks 是根据调用顺序来确定下一次重新渲染时的.
+所以，Hooks 只能在组件顶层使用，不能在分支语句中使用。
