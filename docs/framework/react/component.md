@@ -5,7 +5,7 @@ reference:
     site: CUGGZ
 ---
 
-# 组件
+# React 组件
 
 ## React.Component 和 React.PureComponent
 
