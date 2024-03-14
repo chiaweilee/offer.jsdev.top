@@ -1,7 +1,9 @@
 export default [
   {
     text: '架构',
-    items: [],
+    items: [
+      { text: '架构设计', link: '/master/architecture' },
+    ],
   },
   {
     text: '项目管理',
