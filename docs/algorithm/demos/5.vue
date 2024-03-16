@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const s = 'babab';
+const s = 'babad';
 const n = s.length;
 const res = ref('');
 const dp = ref(Array.from(new Array(n), () => new Array(n).fill('-')));
