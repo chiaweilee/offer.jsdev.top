@@ -7,7 +7,9 @@ reference:
 
 # React 事件机制
 
-## 事件绑定
+## 合成事件 SyntheticEvent
+
+为了提高性能，React使用事件池来管理事件。
 
 React 并不是将 click 事件绑定到真实 DOM 上，而是在 document 处监听了所有的事件。
 当事件冒泡到 document 时，再将事件交由处理函数运行。
@@ -16,7 +18,7 @@ React 并不是将 click 事件绑定到真实 DOM 上，而是在 document 处�
 - 减少了内存的消耗
 - 可以在组件挂载、销毁时统一订阅和移除事件
 
-## event.preventDefault()
+### event.preventDefault()
 
 冒泡到 document 上的事件不是浏览器原生事件，而是 React 自己实现的合成事件（SyntheticEvent）。
 因此，阻止事件冒泡要用 `event.preventDefault()`，而不是 `event.stopPropagation()` 方法。
