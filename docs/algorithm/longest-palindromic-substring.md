@@ -21,10 +21,13 @@ reference:
 解释："aba" 同样是符合题意的答案。
 ```
 
+## 动态规划
+
 ::: info 解题思路
 dp[i,j] 表示从索引 i 到 j 的子串是否是回文串
 
 dp[i,j] 是否是回文串，可以拆解成两个子问题
+
 - s[i] == s[j]，子串两边相同
 - 且中间部分，即 dp[i+1][j-1] 也是回文串
 
@@ -59,6 +62,49 @@ function longestPalindrome(s: string): string {
       }
     }
   }
+  return res;
+}
+```
+:::
+
+## 中心扩展算法
+
+::: info 解题思路
+结合动态规划的思路，如果中心是回文串，往外扩展，如果左右相同，则扩展后的字串也是回文串。<br/>
+如此重复，直到不满足条件，即得到最长回文串。
+
+注意，回文串有两种情况：
+
+- 长度为奇数，中心是一个字符串（例如，aba，中心是 b）
+- 长度为偶数，中心是两个字符串（例如，abba，中心是 bb）
+  :::
+
+::: details 参考答案
+```ts
+function longestPalindrome(s: string): string {
+  if (s.length < 2) return s;
+
+  let res = '';
+
+  for (let i = 0; i < s.length; i++) {
+    // 奇数情况
+    expandPalindrome(i, i);
+    // 偶数情况
+    expandPalindrome(i, i + 1);
+  }
+
+  function expandPalindrome(m, n) {
+    // 尝试扩展，指导不满足回文串
+    while (m >= 0 && n < s.length && s[m] === s[n]) {
+      m--;
+      n++;
+    }
+    // 注意：此时已扩展到不满足回文条件，因此取值要
+    if (n - m - 1 > res.length) {
+      res = s.substring(m + 1, n);
+    }
+  }
+
   return res;
 }
 ```
