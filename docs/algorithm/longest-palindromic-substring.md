@@ -83,7 +83,6 @@ function longestPalindrome(s: string): string {
 ```ts
 function longestPalindrome(s: string): string {
   if (s.length < 2) return s;
-
   let res = '';
 
   for (let i = 0; i < s.length; i++) {
@@ -94,7 +93,7 @@ function longestPalindrome(s: string): string {
   }
 
   function expandPalindrome(m, n) {
-    // 尝试扩展，指导不满足回文串
+    // 尝试扩展，直到不满足回文串
     while (m >= 0 && n < s.length && s[m] === s[n]) {
       m--;
       n++;
