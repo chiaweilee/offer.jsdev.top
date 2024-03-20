@@ -18,4 +18,10 @@ export default [
     ],
   },
   { text: 'Vue 和 React 区别', link: '/framework/different' },
+  {
+    text: '小程序',
+    items: [
+      { text: 'uni-app', link: '/framework/miniapp/uni-app' },
+    ],
+  },
 ];
