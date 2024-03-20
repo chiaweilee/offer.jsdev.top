@@ -1,7 +1,11 @@
 export default [
   {
     text: 'Vue',
-    items: [],
+    items: [
+      { text: '数据响应', link: '/framework/vue/reactivity' },
+      { text: 'API', link: '/framework/vue/api' },
+      { text: '模板语法', link: '/framework/vue/template' },
+    ],
   },
   {
     text: 'React',
