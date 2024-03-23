@@ -4,76 +4,81 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-devDependencies:
-  '@babel/core':
-    specifier: ^7.21.0
-    version: 7.24.0
-  '@babel/eslint-parser':
-    specifier: ^7.19.1
-    version: 7.23.10(@babel/core@7.24.0)(eslint@8.57.0)
-  '@types/jest':
-    specifier: ^29.4.0
-    version: 29.5.12
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^5.53.0
-    version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)(typescript@4.9.5)
-  '@typescript-eslint/parser':
-    specifier: ^5.53.0
-    version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
-  eslint-config-ali:
-    specifier: ^14.0.2
-    version: 14.2.1(eslint@8.57.0)(typescript@4.9.5)
-  eslint-config-prettier:
-    specifier: ^8.3.0
-    version: 8.10.0(eslint@8.57.0)
-  eslint-import-resolver-typescript:
-    specifier: ^3.5.3
-    version: 3.6.1(@typescript-eslint/parser@5.62.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
-  eslint-plugin-import:
-    specifier: ^2.27.5
-    version: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
-  eslint-plugin-prettier:
-    specifier: ^4.0.0
-    version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.57.0)(prettier@2.8.8)
-  eslint-plugin-vue:
-    specifier: ^9.9.0
-    version: 9.22.0(eslint@8.57.0)
-  father-build:
-    specifier: ^1.22.5
-    version: 1.22.5(webpack@5.90.3)
-  jest:
-    specifier: ^29.4.3
-    version: 29.7.0
-  jsdom:
-    specifier: ^24.0.0
-    version: 24.0.0
-  prettier:
-    specifier: ^2.5.0
-    version: 2.8.8
-  stylelint:
-    specifier: ^14.5.0
-    version: 14.16.1
-  stylelint-config-ali:
-    specifier: ^0.4.2
-    version: 0.4.2(stylelint-scss@4.7.0)(stylelint@14.16.1)
-  stylelint-scss:
-    specifier: ^4.1.0
-    version: 4.7.0(stylelint@14.16.1)
-  ts-jest:
-    specifier: ^29.0.5
-    version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@4.9.5)
-  typescript:
-    specifier: ^4.9.5
-    version: 4.9.5
-  vitepress:
-    specifier: 1.0.0-alpha.51
-    version: 1.0.0-alpha.51(@algolia/client-search@4.22.1)(search-insights@2.13.0)(typescript@4.9.5)
-  vue:
-    specifier: ^3.2.47
-    version: 3.4.21(typescript@4.9.5)
-  vue-eslint-parser:
-    specifier: ^9.1.0
-    version: 9.4.2(eslint@8.57.0)
+importers:
+
+  .:
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.21.0
+        version: 7.24.0
+      '@babel/eslint-parser':
+        specifier: ^7.19.1
+        version: 7.23.10(@babel/core@7.24.0)(eslint@8.57.0)
+      '@types/jest':
+        specifier: ^29.4.0
+        version: 29.5.12
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^5.53.0
+        version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)(typescript@4.9.5)
+      '@typescript-eslint/parser':
+        specifier: ^5.53.0
+        version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
+      eslint-config-ali:
+        specifier: ^14.0.2
+        version: 14.2.1(eslint@8.57.0)(typescript@4.9.5)
+      eslint-config-prettier:
+        specifier: ^8.3.0
+        version: 8.10.0(eslint@8.57.0)
+      eslint-import-resolver-typescript:
+        specifier: ^3.5.3
+        version: 3.6.1(@typescript-eslint/parser@5.62.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+      eslint-plugin-import:
+        specifier: ^2.27.5
+        version: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-prettier:
+        specifier: ^4.0.0
+        version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.57.0)(prettier@2.8.8)
+      eslint-plugin-vue:
+        specifier: ^9.9.0
+        version: 9.22.0(eslint@8.57.0)
+      father-build:
+        specifier: ^1.22.5
+        version: 1.22.5(webpack@5.90.3)
+      jest:
+        specifier: ^29.4.3
+        version: 29.7.0
+      jsdom:
+        specifier: ^24.0.0
+        version: 24.0.0
+      prettier:
+        specifier: ^2.5.0
+        version: 2.8.8
+      stylelint:
+        specifier: ^14.5.0
+        version: 14.16.1
+      stylelint-config-ali:
+        specifier: ^0.4.2
+        version: 0.4.2(stylelint-scss@4.7.0)(stylelint@14.16.1)
+      stylelint-scss:
+        specifier: ^4.1.0
+        version: 4.7.0(stylelint@14.16.1)
+      ts-jest:
+        specifier: ^29.0.5
+        version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@4.9.5)
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      vitepress:
+        specifier: 1.0.0-alpha.51
+        version: 1.0.0-alpha.51(@algolia/client-search@4.22.1)(search-insights@2.13.0)(typescript@4.9.5)
+      vue:
+        specifier: ^3.2.47
+        version: 3.4.21(typescript@4.9.5)
+      vue-eslint-parser:
+        specifier: ^9.1.0
+        version: 9.4.2(eslint@8.57.0)
+
+  packages/sth: {}
 
 packages:
 
