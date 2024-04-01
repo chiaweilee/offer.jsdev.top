@@ -53,7 +53,7 @@ function findKthLargest(nums: number[], k: number): number {
   let heapSize = nums.length;
   buildMaxHeap(nums, heapSize); // 构建一个大顶堆
   // 大顶堆是最大元素下沉到末尾
-  for (let i = nums.length - 1; i >= nums.length - k + 1; i--) {
+  for (let i = nums.length - 1; i >= nums.length - k + 1; --i) {
     swap(nums, 0, i);
     --heapSize; // 下沉后的元素不参与到大顶堆的调整
     // 重新调整大顶堆
@@ -64,7 +64,7 @@ function findKthLargest(nums: number[], k: number): number {
 
 // 自下而上构建一个大顶堆
 function buildMaxHeap(arr, heapSize) {
-  for (let i = Math.floor(heapSize / 2) - 1; i >= 0; i--) {
+  for (let i = Math.floor(heapSize / 2) - 1; i >= 0; --i) {
     maxHeapify(arr, i, heapSize);
   }
 }

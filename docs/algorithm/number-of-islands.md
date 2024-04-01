@@ -55,8 +55,8 @@ function numIslands(grid: string[][]): number {
     }
   }
 
-  for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid[i].length; j++) {
+  for (let i = 0; i < grid.length; ++i) {
+    for (let j = 0; j < grid[i].length; ++j) {
       if (grid[i][j] === '1') {
         count++;
         sink(i, j);

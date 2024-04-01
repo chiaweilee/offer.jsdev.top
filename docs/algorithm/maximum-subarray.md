@@ -29,7 +29,7 @@ f(i) 表示以第 i 个数字结尾的连续子数组的最大和
 function maxSubArray(nums: number[]): number {
   let pre = nums[0];
   let ans = nums[0];
-  for (let i = 1; i < nums.length; i++) {
+  for (let i = 1; i < nums.length; ++i) {
     pre = pre > 0 ? pre + nums[i] : nums[i];
     ans = Math.max(pre, ans);
   }

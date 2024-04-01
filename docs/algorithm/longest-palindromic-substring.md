@@ -52,8 +52,8 @@ function longestPalindrome(s: string): string {
   // 创建一个矩阵，记录子问题答案
   const dp = Array.from(new Array(n), () => new Array(n).fill(0));
   // 从后往前，从短到长进行判断
-  for (let i = n - 1; i >= 0; i--) {
-    for (let j = i; j < n; j++) {
+  for (let i = n - 1; i >= 0; --i) {
+    for (let j = i; j < n; ++j) {
       // 两边相同，且中间也是回文串（复用前面的判断步骤得到的结果）
       dp[i][j] = s[i] == s[j] && (j - i < 2 || dp?.[i + 1]?.[j - 1] === true);
       // 如果是回文，且长度最长
@@ -85,7 +85,7 @@ function longestPalindrome(s: string): string {
   if (s.length < 2) return s;
   let res = '';
 
-  for (let i = 0; i < s.length; i++) {
+  for (let i = 0; i < s.length; ++i) {
     // 奇数情况
     expandPalindrome(i, i);
     // 偶数情况

@@ -26,7 +26,7 @@ reference:
 function maxProfit(prices: number[]): number {
   let maxprofit = 0;
   let minprice = Number.MAX_SAFE_INTEGER;
-  for (let i = 0; i < prices.length; i++) {
+  for (let i = 0; i < prices.length; ++i) {
     maxprofit = Math.max(maxprofit, prices[i] - minprice);
     minprice = Math.min(minprice, prices[i]);
   }

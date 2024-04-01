@@ -28,7 +28,7 @@ function levelOrder(root: Node | null): number[][] {
   while (queue.length > 0) {
     const levelLength = queue.length;
     const levelValues = [];
-    for (let i = 0; i < levelLength; i++) {
+    for (let i = 0; i < levelLength; ++i) {
       const node = queue.shift();
       levelValues.push(node.val);
       for (const child of node.children) {

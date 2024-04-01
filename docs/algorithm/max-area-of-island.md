@@ -38,8 +38,8 @@ function maxAreaOfIsland(grid: number[][]): number {
     return 0;
   }
 
-  for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid[i].length; j++) {
+  for (let i = 0; i < grid.length; ++i) {
+    for (let j = 0; j < grid[i].length; ++j) {
       if (grid[i][j] === 1) {
         max = Math.max(max, sink(i, j));
       }

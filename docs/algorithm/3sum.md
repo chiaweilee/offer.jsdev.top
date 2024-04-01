@@ -34,7 +34,7 @@ function threeSum(nums: number[]): number[][] {
   nums.sort((a, b) => a - b);
 
   // 先锁定三个数中的第一个数字
-  for (let i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; ++i) {
     // 第一个数字大于 0，无解
     if (nums[i] > 0) break;
     // 第一个数字去重

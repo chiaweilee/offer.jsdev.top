@@ -9,7 +9,7 @@ const i = ref(n - 1);
 
 function next() {
   if (i.value >= 0) {
-    for (let j = i.value; j < n; j++) {
+    for (let j = i.value; j < n; ++j) {
       dp.value[i.value][j] =
         s[i.value] == s[j] && (j - i.value < 2 || dp.value[i.value + 1][j - 1]);
       if (dp.value[i.value][j] && j - i.value + 1 > res.value.length) {
