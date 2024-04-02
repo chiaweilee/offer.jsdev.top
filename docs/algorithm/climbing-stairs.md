@@ -45,9 +45,9 @@ function climbStairs(n: number): number {
   let fn_2 = 1; // 初始化 n = 2 时，f(n - 2)
   let fn = 1; // n < 3 时，结果为 1
   for (let i = 2; i <= n; ++i) {
-    fn = fn2 + fn1; // f(n) = f(n - 1) + f(n - 2)
-    fn2 = fn1;
-    fn1 = fn;
+    fn = fn_2 + fn_1; // f(n) = f(n - 1) + f(n - 2)
+    fn_2 = fn1;
+    fn_1 = fn;
   }
   return fn;
 };
