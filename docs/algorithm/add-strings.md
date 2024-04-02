@@ -39,7 +39,9 @@ function addStrings(num1: string, num2: string): string {
   let carry = 0;
   let sum = '';
   while (i >= 0 || j >= 0 || carry !== 0) {
-    const total = (num1.charAt(i) as any) - 0 + ((num2.charAt(j) as any) - 0) + carry;
+    const n1 = num1.charAt(i) as any - 0;
+    const n2 = num2.charAt(j) as any - 0;
+    const total = n1 + n2 + carry;
     carry = total > 9 ? 1 : 0;
     sum += total % 10;
     i--;
