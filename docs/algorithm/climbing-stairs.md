@@ -23,10 +23,10 @@ reference:
 ```
 
 ::: info 解题思路
-f(n) 表示爬第 n 阶楼梯的方法数量
-- f(n) = f(n - 1) + f(n - 2)
+f(n) 表示爬第 n 阶楼梯的方法数量，有 f(n) = f(n - 1) + f(n - 2)
+- f(0) 看作 1
 - f(1) = 1
-- f(2) = f(1) => 1
+- f(2) = f(n - 1), 即 f(1)，等于 1
 - f(3) = f(2) + f(1)
 :::
 
@@ -41,8 +41,8 @@ import Demo from './demos/70.vue';
 ::: details 参考答案
 ```ts
 function climbStairs(n: number): number {
-  let fn1 = 0;
-  let fn2 = 1;
+  let fn_1 = 1; // 初始化 n = 2 时，f(n - 1)
+  let fn_2 = 1; // 初始化 n = 2 时，f(n - 2)
   let fn = 1; // n < 3 时，结果为 1
   for (let i = 2; i <= n; ++i) {
     fn = fn2 + fn1; // f(n) = f(n - 1) + f(n - 2)
