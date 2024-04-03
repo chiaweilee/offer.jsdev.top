@@ -98,7 +98,7 @@ function longestPalindrome(s: string): string {
       m--;
       n++;
     }
-    // 注意：此时已扩展到不满足回文条件，因此取值要
+    // 注意：此时已扩展到不满足回文条件，因此回文长度要减去两头
     if (n - m - 1 > res.length) {
       res = s.substring(m + 1, n);
     }
