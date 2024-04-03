@@ -18,6 +18,25 @@ reference:
 输出: 5;
 ```
 
+## 冒泡排序
+
+::: details 参考答案
+
+```ts
+function findKthLargest(nums: number[], k: number): number {
+  for (let i = 0; i < nums.length; ++i) {
+    for (let j = 0; j < nums.length - 1 - i; ++j) {
+      if (nums[j] > nums[j + 1]) {
+        [nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
+      }
+    }
+  }
+  return nums[mums.length - k];
+}
+```
+
+:::
+
 ## 堆排序
 
 堆排序是利用`堆`这种数据结构的一种排序算法，它是一种选择排序，最坏、最好、平均时间复杂度均为`O(nlogn)`，它是不稳定排序。
