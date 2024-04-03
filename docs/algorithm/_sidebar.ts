@@ -71,11 +71,11 @@ export default [
   {
     text: '堆',
     items: [
-      { text: '215. 数组中的第K个最大元素', link: '/algorithm/kth-largest-element-in-an-array' },
       {
         text: '912. 排序数组',
         link: '/algorithm/sort-an-array',
       },
+      { text: '215. 数组中的第K个最大元素', link: '/algorithm/kth-largest-element-in-an-array' },
     ],
   },
   {
