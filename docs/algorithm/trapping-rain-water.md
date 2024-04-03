@@ -23,14 +23,16 @@ function trap(height: number[]): number {
   // 向右取最大阴影面积
   const leftMax = [];
   leftMax[0] = height[0];
-  for (let i = 1; i < height.length; ++i) {
+  leftMax[height.length - 1] = height[height.length - 1];
+  for (let i = 1; i < height.length - 1; ++i) {
     leftMax[i] = Math.max(leftMax[i - 1], height[i]);
   }
 
   // 向左取最大阴影面积
-  const rightMax = [height[0]];
+  const rightMax = [];
+  rightMax[0] = height[0];
   rightMax[height.length - 1] = height[height.length - 1];
-  for (let i = height.length - 2; i >= 0; --i) {
+  for (let i = height.length - 2; i > 0; --i) {
     rightMax[i] = Math.max(rightMax[i + 1], height[i]);
   }
 
