@@ -1,9 +1,7 @@
 export default [
   {
     text: '哈希表',
-    items: [
-      { text: '1. 两数之和', link: '/algorithm/two-sum' },
-    ],
+    items: [{ text: '1. 两数之和', link: '/algorithm/two-sum' }],
   },
   {
     text: '双指针',
@@ -20,6 +18,10 @@ export default [
       {
         text: '3. 无重复字符的最长子串',
         link: '/algorithm/longest-substring-without-repeating-characters',
+      },
+      {
+        text: '209. 长度最小的子数组',
+        link: '/algorithm/minimum-size-subarray-sum',
       },
     ],
   },
