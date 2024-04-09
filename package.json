@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
     "test": "jest",
@@ -30,7 +31,7 @@
     "stylelint-scss": "^4.1.0",
     "ts-jest": "^29.0.5",
     "typescript": "^4.9.5",
-    "vitepress": "1.0.0-alpha.51",
+    "vitepress": "^1.1.0",
     "vue": "^3.2.47",
     "vue-eslint-parser": "^9.1.0"
   }
