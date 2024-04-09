@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import { useData } from 'vitepress';
-
-// https://github.com/vuejs/vitepress/issues/769#issuecomment-1152541214
-const reference = computed(() => {
-  return useData().frontmatter.value['reference'];
-});
+const frontmatter = useData().frontmatter;
 </script>
 
 <template>
-  <dl class="reference" v-if="reference">
+  <dl class="reference" v-if="frontmatter.reference">
     <dt class="reference-title">参考资料</dt>
     <dd class="reference-list-wrap">
       <ul class="reference-list">
-        <li v-for="ref in reference" class="reference-item">
+        <li v-for="ref in frontmatter.reference" class="reference-item">
           <span class="index">-</span>
           <a :href="ref.href" rel="noreferrer" target="_blank" class="text"
             >{{ ref.title }}
