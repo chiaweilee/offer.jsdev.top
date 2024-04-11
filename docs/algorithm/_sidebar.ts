@@ -32,6 +32,7 @@ export default [
       { text: '70. 爬楼梯', link: '/algorithm/climbing-stairs' },
       { text: '121. 买卖股票的最佳时机', link: '/algorithm/best-time-to-buy-and-sell-stock' },
       { text: '5. 最长回文子串', link: '/algorithm/longest-palindromic-substring' },
+      { text: '62. 不同路径', link: '/algorithm/unique-paths' },
       { text: '42. 接雨水', link: '/algorithm/trapping-rain-water' },
     ],
   },
