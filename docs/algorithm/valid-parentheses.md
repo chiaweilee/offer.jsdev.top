@@ -41,7 +41,6 @@ import Demo from './demos/20.vue';
 ::: details 参考答案
 ```ts
 function isValid(s: string): boolean {
-  if (s.length % 2 === 1) return false;
   const hash = { ')': '(', ']': '[', '}': '{' };
   const stack = [];
   for (const w of s) {
