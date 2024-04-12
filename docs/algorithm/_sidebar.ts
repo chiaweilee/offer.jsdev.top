@@ -37,7 +37,7 @@ export default [
     ],
   },
   {
-    text: '树',
+    text: '广度优先/深度优先',
     items: [
       { text: '226. 翻转二叉树', link: '/algorithm/invert-binary-tree' },
       { text: '104. 二叉树的最大深度', link: '/algorithm/maximum-depth-of-binary-tree' },
@@ -52,14 +52,8 @@ export default [
     items: [{ text: '46. 全排列', link: '/algorithm/permutations' }],
   },
   {
-    text: '链表',
-    items: [
-      { text: '21. 合并两个有序链表', link: '/algorithm/merge-two-sorted-lists' },
-      { text: '206. 反转链表', link: '/algorithm/reverse-linked-list' },
-      { text: '92. 反转链表 II', link: '/algorithm/reverse-linked-list-ii' },
-      { text: '02.02. 返回倒数第 k 个节点', link: '/algorithm/kth-node-from-end-of-list-lcci' },
-      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' },
-    ],
+    text: '递归',
+    items: [{ text: '46. 全排列', link: '/algorithm/permutations' }],
   },
   {
     text: '矩阵',
@@ -67,6 +61,16 @@ export default [
       { text: '200. 岛屿数量', link: '/algorithm/number-of-islands' },
       { text: '695. 岛屿的最大面积', link: '/algorithm/max-area-of-island' },
       { text: '54. 螺旋矩阵', link: '/algorithm/spiral-matrix' },
+    ],
+  },
+  {
+    text: '链表',
+    items: [
+      { text: '21. 合并两个有序链表', link: '/algorithm/merge-two-sorted-lists' },
+      { text: '206. 反转链表', link: '/algorithm/reverse-linked-list' },
+      { text: '92. 反转链表 II', link: '/algorithm/reverse-linked-list-ii' },
+      { text: '02.02. 返回倒数第 k 个节点', link: '/algorithm/kth-node-from-end-of-list-lcci' },
+      { text: '141. 环形链表', link: '/algorithm/linked-list-cycle' },
     ],
   },
   {
