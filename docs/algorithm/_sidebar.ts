@@ -39,6 +39,7 @@ export default [
   {
     text: '树',
     items: [
+      { text: '226. 翻转二叉树', link: '/algorithm/invert-binary-tree' },
       { text: '104. 二叉树的最大深度', link: '/algorithm/maximum-depth-of-binary-tree' },
       { text: '102. 二叉树的层序遍历', link: '/algorithm/binary-tree-level-order-traversal' },
       { text: '112. 路径总和', link: '/algorithm/path-sum' },
