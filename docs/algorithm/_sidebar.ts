@@ -1,7 +1,10 @@
 export default [
   {
     text: '哈希表',
-    items: [{ text: '1. 两数之和', link: '/algorithm/two-sum' }],
+    items: [
+      { text: '1. 两数之和', link: '/algorithm/two-sum' },
+      { text: '146. LRU 缓存', link: '/algorithm/lru-cache' },
+    ],
   },
   {
     text: '双指针',
