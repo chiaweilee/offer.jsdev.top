@@ -36,6 +36,7 @@ export default [
       { text: '121. 买卖股票的最佳时机', link: '/algorithm/best-time-to-buy-and-sell-stock' },
       { text: '5. 最长回文子串', link: '/algorithm/longest-palindromic-substring' },
       { text: '62. 不同路径', link: '/algorithm/unique-paths' },
+      { text: '300. 最长递增子序列', link: '/algorithm/longest-increasing-subsequence' },
       { text: '42. 接雨水', link: '/algorithm/trapping-rain-water' },
     ],
   },
