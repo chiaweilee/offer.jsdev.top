@@ -1,7 +1,9 @@
 export default [
   {
     text: '哈希表',
+    link: '/algorithm/hash-table',
     items: [
+      { text: '217. 存在重复元素', link: '/algorithm/contains-duplicate' },
       { text: '1. 两数之和', link: '/algorithm/two-sum' },
       { text: '146. LRU 缓存', link: '/algorithm/lru-cache' },
     ],
