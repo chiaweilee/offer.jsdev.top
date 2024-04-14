@@ -1,7 +1,7 @@
 ---
 reference:
   - title: 哈希表
-    href: https://leetcode.cn/tag/hash-table/problemset/
+    href: https://leetcode.cn/tag/hash-table/
     site: 力扣（LeetCode）
 ---
 

@@ -32,9 +32,11 @@ export default [
   },
   {
     text: '动态规划',
+    link: '/algorithm/dynamic-programming',
     items: [
       { text: '53. 最大子数组和', link: '/algorithm/maximum-subarray' },
       { text: '70. 爬楼梯', link: '/algorithm/climbing-stairs' },
+      { text: '322. 零钱兑换', link: '/algorithm/coin-change' },
       { text: '121. 买卖股票的最佳时机', link: '/algorithm/best-time-to-buy-and-sell-stock' },
       { text: '5. 最长回文子串', link: '/algorithm/longest-palindromic-substring' },
       { text: '62. 不同路径', link: '/algorithm/unique-paths' },
