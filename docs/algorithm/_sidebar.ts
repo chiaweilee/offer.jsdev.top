@@ -12,6 +12,7 @@ export default [
     text: '双指针',
     items: [
       { text: '88. 合并两个有序数组', link: '/algorithm/merge-sorted-array' },
+      { text: '704. 二分查找', link: '/algorithm/binary-search' },
       { text: '165. 比较版本号', link: '/algorithm/compare-version-numbers' },
       { text: '415. 字符串相加', link: '/algorithm/add-strings' },
       { text: '15. 三数之和', link: '/algorithm/3sum' },
