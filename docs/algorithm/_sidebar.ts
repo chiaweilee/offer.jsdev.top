@@ -93,7 +93,7 @@ export default [
       {
         text: '斐波那契数',
         items: [
-          { text: '09. 斐波那契数', link: '/algorithm/fibonacci-number' },
+          { text: '509. 斐波那契数', link: '/algorithm/fibonacci-number' },
           { text: '70. 爬楼梯', link: '/algorithm/climbing-stairs' },
         ],
       },
