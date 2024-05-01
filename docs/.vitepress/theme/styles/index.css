@@ -2,3 +2,8 @@
 @import url('./home.css');
 @import url('./doc.css');
 @import url('./customize.css');
+
+.formula {
+  padding-top: 8px;
+  font: 400 1.21em Times New Roman, serif;
+}

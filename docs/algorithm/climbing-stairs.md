@@ -22,34 +22,27 @@ reference:
 3. 2 阶 + 1 阶
 ```
 
-::: info 解题思路
-f(n) 表示爬第 n 阶楼梯的方法数量，有 f(n) = f(n - 1) + f(n - 2)
-- f(0) 看作 1
-- f(1) = 1
-- f(2) = f(n - 1), 即 f(1)，等于 1
-- f(3) = f(2) + f(1)
-:::
-
-<script setup>
-import Demo from './demos/70.vue';
-</script>
-
-::: info 动画演示
-<Demo />
-:::
+<div class="formula">
+F(n) = F(n−1) + F(n−2)，n ≥ 3，F(1) = 1，F(2) = 2
+</div>
 
 ::: details 参考答案
+
 ```ts
 function climbStairs(n: number): number {
-  let fn_1 = 1; // 初始化 n = 2 时，f(n - 1)
-  let fn_2 = 1; // 初始化 n = 2 时，f(n - 2)
-  let fn = 1; // n < 3 时，结果为 1
-  for (let i = 2; i <= n; ++i) {
-    fn = fn_2 + fn_1; // f(n) = f(n - 1) + f(n - 2)
-    fn_2 = fn1;
-    fn_1 = fn;
+  if (n === 1) return 1;
+  if (n === 2) return 2;
+  let fn2 = 1; // n = 3 时，f(n - 2) = f(1) = 1
+  let fn1 = 2; // n = 3 时，f(n - 1) = f(2) = 2
+  let fn;
+  for (let i = 3; i <= n; ++i) {
+    fn = fn2 + fn1;
+    // 为下一次遍历做准备
+    fn2 = fn1;
+    fn1 = fn;
   }
   return fn;
-};
+}
 ```
+
 :::
