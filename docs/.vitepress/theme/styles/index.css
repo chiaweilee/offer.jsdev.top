@@ -3,7 +3,15 @@
 @import url('./doc.css');
 @import url('./customize.css');
 
+@font-face {
+  font-family: 'KaTex';
+  src: url('./KaTeX_Main-Regular.0462f03b.woff2') format('woff2');
+}
+
 .formula {
-  padding-top: 8px;
-  font: 400 1.21em Times New Roman, serif;
+  margin: 1em 0;
+  font-family: KaTex, Times New Roman, serif;
+  font-size: 1.21em;
+  font-weight: 400;
+  line-height: 1.5rem;
 }

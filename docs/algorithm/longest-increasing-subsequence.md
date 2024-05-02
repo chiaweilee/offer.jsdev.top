@@ -19,7 +19,14 @@ reference:
 解释：最长递增子序列是 [2,3,7,101]，因此长度为 4 。
 ```
 
-::: detail 参考答案
+::: info 解题思路
+
+<div class="formula">
+dp[i] = max(dp[j]) + 1, 0 ≤ j < i, num[j] < num[i]
+</div>
+:::
+
+::: details 参考答案
 
 ```ts
 function lengthOfLIS(nums: number[]): number {

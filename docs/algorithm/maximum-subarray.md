@@ -18,6 +18,10 @@ reference:
 ```
 
 ::: info 解题思路
+
+<div class="formula">
+dp[i] = max{nums[i], dp[i−1] + nums[i]}
+</div>
 f(i) 表示以第 i 个数字结尾的连续子数组的最大和
 - 如果 f(i - 1) ≤ 0，负增益，则 f(i) = nums[i]
 - 如果 f(i - 1) > 0，正增益，则 f(i) = f(i - 1) + nums[i]
@@ -25,15 +29,17 @@ f(i) 表示以第 i 个数字结尾的连续子数组的最大和
 :::
 
 ::: details 参考答案
+
 ```ts
 function maxSubArray(nums: number[]): number {
-  let pre = nums[0];
+  let pre = 0;
   let ans = nums[0];
-  for (let i = 1; i < nums.length; ++i) {
-    pre = pre > 0 ? pre + nums[i] : nums[i];
+  for (let i = 0; i < nums.length; ++i) {
+    pre = Math.max(nums[i], pre + nums[i]);
     ans = Math.max(pre, ans);
   }
   return ans;
-};
+}
 ```
+
 :::
