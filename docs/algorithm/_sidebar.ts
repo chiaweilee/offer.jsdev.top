@@ -16,6 +16,7 @@ export default [
       { text: '165. 比较版本号', link: '/algorithm/compare-version-numbers' },
       { text: '415. 字符串相加', link: '/algorithm/add-strings' },
       { text: '15. 三数之和', link: '/algorithm/3sum' },
+      { text: '283. 移动零', link: '/algorithm/move-zeroes' },
     ],
   },
   {
