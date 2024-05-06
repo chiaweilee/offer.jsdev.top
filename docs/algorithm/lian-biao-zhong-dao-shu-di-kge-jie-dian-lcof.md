@@ -1,11 +1,11 @@
 ---
 reference:
-  - title: LCR 140. 训练计划 II
+  - title: 剑指 Offer 22. 链表中倒数第k个节点
     href: https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof
     site: 力扣（LeetCode）
 ---
 
-# LCR 140. 训练计划 II
+# 剑指 Offer 22. 链表中倒数第k个节点
 
 给定一个头节点为`head`的链表用于记录一系列核心肌群训练项目编号，请查找并返回倒数第`cnt`个训练项目编号。
 

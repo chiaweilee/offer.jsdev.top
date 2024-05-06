@@ -62,7 +62,7 @@ export default [
   {
     text: '链表',
     items: [
-      { text: '剑指 Offer 22. 链表中倒数第k个节点', link: '/algorithm/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof' },
+      { text: 'Offer 22. 链表中倒数第k个节点', link: '/algorithm/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof' },
       { text: '21. 合并两个有序链表', link: '/algorithm/merge-two-sorted-lists' },
       { text: '206. 反转链表', link: '/algorithm/reverse-linked-list' },
       { text: '92. 反转链表 II', link: '/algorithm/reverse-linked-list-ii' },
