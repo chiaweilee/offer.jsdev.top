@@ -48,10 +48,6 @@ export default [
     items: [{ text: '46. 全排列', link: '/algorithm/permutations' }],
   },
   {
-    text: '递归',
-    items: [{ text: '46. 全排列', link: '/algorithm/permutations' }],
-  },
-  {
     text: '矩阵',
     items: [
       { text: '200. 岛屿数量', link: '/algorithm/number-of-islands' },
