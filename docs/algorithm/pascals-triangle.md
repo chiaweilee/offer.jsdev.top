@@ -21,7 +21,7 @@ reference:
 ::: info 解题思路
 
 <div class="formula">
-dp[i][j] = dp[i-1][j-1] + dp[i-1][j]
+dp[i][j] = dp[i-1][j-1] + dp[i-1][j], dp[i][0] = 1, dp[i][-1] = 1
 </div>
 :::
 
