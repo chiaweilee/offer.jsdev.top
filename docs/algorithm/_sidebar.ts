@@ -107,6 +107,7 @@ export default [
         text: '矩阵',
         items: [{ text: '62. 不同路径', link: '/algorithm/unique-paths' }],
       },
+      { text: '118. 杨辉三角', link: '/algorithm/pascals-triangle' },
       { text: '5. 最长回文子串', link: '/algorithm/longest-palindromic-substring' },
       { text: '322. 零钱兑换', link: '/algorithm/coin-change' },
       { text: '42. 接雨水', link: '/algorithm/trapping-rain-water' },
