@@ -16,7 +16,7 @@ reference:
 输出：[4,7,2,9,6,3,1]
 ```
 
-::: detail 参考答案
+::: details 参考答案
 
 ```ts
 function invertTree(root: TreeNode | null): TreeNode | null {
