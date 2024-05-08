@@ -15,7 +15,7 @@ reference:
 
 **叶节点**是指没有子节点的节点。
 
-## 深度优先
+## 深度优先搜索
 
 ::: details 参考答案
 ```ts
@@ -34,7 +34,7 @@ function sumNumbers(root: TreeNode | null): number {
 ```
 :::
 
-## 广度优先
+## 广度优先搜索
 
 ::: details 参考答案
 ```ts

@@ -18,15 +18,40 @@ reference:
 输出：3
 ```
 
-::: info 解题思路
-深度优先
-:::
+## 深度优先搜索
 
 ::: details 参考答案
+
 ```ts
 function maxDepth(root: TreeNode | null): number {
   if (root === null) return 0;
   return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 }
 ```
+
+:::
+
+## 广度优先搜索
+
+::: details 参考答案
+
+```ts
+function maxDepth(root: TreeNode | null): number {
+  if (root === null) return 0;
+  let ans = 0;
+  const queue = [root];
+  while (queue.length > 0) {
+    let size = queue.length;
+    while (size > 0) {
+      const node = queue.shift();
+      if (node.left !== null) queue.push(node.left);
+      if (node.right !== null) queue.push(node.right);
+      size--;
+    }
+    ans++;
+  }
+  return ans;
+}
+```
+
 :::
