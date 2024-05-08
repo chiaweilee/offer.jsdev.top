@@ -1,14 +1,15 @@
+// 使用示例
 import { typeOf } from 'sth';
 
 typeOf(2); // number
 typeOf(true); // boolean
 
-// 正确判断引用数据类型
+// 原生 typeof 无法正确判断引用数据类型的类型
 typeof []; // object
-typeOf([]); // array
-
 typeof null; // object
-typeOf(null); // null
-
 typeof /a/; // object
+
+// typeOf 可以正确判断引用数据类型的类型
+typeOf([]); // array
+typeOf(null); // null
 typeOf(/a/); // regexp

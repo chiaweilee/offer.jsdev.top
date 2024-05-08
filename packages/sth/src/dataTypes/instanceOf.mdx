@@ -1,8 +1,11 @@
+// 使用示例
 import { instanceOf } from 'sth';
 
 instanceOf([], Array); // true
 instanceOf({}, Object); // true
 
-// 正确判断原始数据类型
+// 原生 instanceof 无法正确判断原始数据类型的类型
 2 instanceof Number; // false
+
+// instanceOf 可以正确判断原始数据类型的类型
 instanceOf(2, Number); // true
